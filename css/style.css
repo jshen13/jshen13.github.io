@@ -128,8 +128,6 @@ a:link {
     padding-top: 100px;
     z-index: 1;
 
-
-    
     animation-duration: 3s;
     animation-name: slideright;
     overflow: hidden;
@@ -201,6 +199,8 @@ a:link {
 
 
 
+
+
 .profile-desc h1{
     font-size: 45px;
 
@@ -242,6 +242,44 @@ a:link {
     padding-top: 20px;
     font-size: 20px;
 
+}
+
+  
+@media screen and (max-width: 500px) {
+    .profile {
+        position: relative;
+        float: left;
+        width: 100%;
+        height: 100%;
+        flex: 100%;
+        /* overflow-x: hidden; Disable horizontal scroll */
+        background-color:#f3f3f3; /* #dfdfdf;*/
+        padding: 20px;
+        padding-top: 100px;
+    
+    
+        overflow: auto;
+    }
+
+    .bio {
+        float: right;
+         /* #f5f5f5;  */
+        padding: 20px;
+        width: 100%;
+    
+    }
+
+    .intro {
+        padding-top: 50px;
+        padding-bottom: 20px;
+        
+        margin: 0;
+    
+    }
+
+    @keyframes slideright {
+        
+    }
 }
 
 .typewriter {
@@ -323,7 +361,7 @@ div.slide-up {
 }
 
 .pos-desc {
-    width: 100%;
+    width: 80%;
 }
 
 .pos-logo {
@@ -367,6 +405,21 @@ div.slide-up {
     padding: 0;
 }
 
+@media screen and (max-width: 500px) {
+    .pos-logo {
+        width: 100px;
+        height: 100px;
+        text-align: right;
+        border-radius: 10px;
+    }
+
+    .pos-desc {
+        width: 100%;
+    }
+    
+    
+}
+
 
 /* ----------------------------------------------------------------------------------------------------- */
 /* notes.html styling */
@@ -404,6 +457,18 @@ div.slide-up {
 
     background-color: lightgrey;
 }
+
+@media screen and (max-width: 500px) {
+    .class-3 {
+        padding-left: 20px;
+        padding-top: 0px;
+        flex: 100%;
+        border-radius: 20px;
+        margin: 15px;
+
+        background-color: lightgrey;      
+    }
+  }
 
 
 .class-title {
@@ -476,15 +541,35 @@ hr {
 .art-3 {
     flex: 33.3%;
     padding: 10px;
-    
 }
-
-
 
 .art-2 {
     flex: 50%;
     padding: 10px;
 }
+
+
+@media screen and (max-width: 800px) {
+    .art-3 {
+        flex: 50%;
+        padding: 10px;      
+    }
+  }
+
+
+
+@media screen and (max-width: 500px) {
+    .art-3 {
+        flex: 100%;
+        padding: 10px;      
+    }
+
+    .art-2 {
+        flex: 100%;
+        padding: 10px;
+    }
+}
+
 
 
 
