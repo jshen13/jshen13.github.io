@@ -95,6 +95,37 @@ a:link {
     text-decoration: none;
 }
 
+.nav-bar .icon {
+    display: none;
+  }
+
+/* @media screen and (max-width: 600px) {
+    .nav-bar li:not(:last-child) {display: none;}
+
+    .nav-bar li::after {
+        float: right;
+        color: #d4d4d4;
+    }
+
+    .nav-bar a.icon {
+      float: right;
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .nav-bar.responsive {position: relative;}
+    .nav-bar.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .nav-bar.responsive li {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  } */
 
 
 
@@ -130,7 +161,7 @@ a:link {
 
     animation-duration: 3s;
     animation-name: slideright;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 @keyframes slideright {
@@ -245,7 +276,7 @@ a:link {
 }
 
   
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
     .profile {
         position: relative;
         float: left;
@@ -405,7 +436,7 @@ div.slide-up {
     padding: 0;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
     .pos-logo {
         width: 100px;
         height: 100px;

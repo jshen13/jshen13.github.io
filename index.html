@@ -10,6 +10,7 @@
     <script type="text/javascript" src="js/main.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Signika&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151003054-2"></script>
     <script>
@@ -26,13 +27,18 @@
 <body>
     <header class="site-header">
 
-        <nav class="nav-bar">
+        <nav class="nav-bar" id="myTopnav" >
             <ul class="nav-menu">
+                
                 <li><a href="art.html">Art Portfolio</a></li>
                 <li><a href="notes.html">Notes</a></li>
                 <li><a class="active" href="index.html">Home</a></li>
                 
             </ul> 
+            <a href="javascript:void(0);" class="icon" onclick="toggleNavBar()">
+                <i class="fa fa-bars"></i>
+              </a>
+
         </nav> 
 
 
@@ -169,10 +175,17 @@
 
             </div>
 
+            <div class="footer">
+                <p>
+                </p>
+            </div>
+
         </div>
 
         
     <!-- </div> -->
+
+    
 
 
 
