@@ -303,7 +303,7 @@ a:link {
     .intro {
         padding-top: 50px;
         padding-bottom: 20px;
-        
+        padding-left: 0px;
         margin: 0;
     
     }
@@ -447,6 +447,33 @@ div.slide-up {
     .pos-desc {
         width: 100%;
     }
+
+    .typewriter {
+        width: fit-content;
+        height: 75px;
+        background-color: #212121;
+        color: white;
+        padding: 10px;
+        border-radius: 8px;
+        margin-bottom: 40px;
+    
+    }
+    .typewriter h1 {
+        font-size: 32px;
+        height: fit-content;
+        height: 60px;
+        vertical-align: middle;
+        line-height: 60px;
+        text-align: center;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .075em solid #589afc; /*The typwriter cursor*/
+        white-space: nowrap; /*Keeps the content on a single line*/
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .07em; /* Adjust as needed */
+        animation: 
+          typing 3s steps(20, end),
+          blink-caret .75s step-end infinite;
+      }
     
     
 }
@@ -498,6 +525,17 @@ div.slide-up {
         margin: 15px;
 
         background-color: lightgrey;      
+    }
+
+    .page-title {
+        margin-left: 20px;
+        padding-top: 0.5px;
+        margin-top: 1px;
+        position: relative;
+        color: black;
+        width: 100%;
+        z-index: 0;
+    
     }
   }
 
@@ -598,6 +636,17 @@ hr {
     .art-2 {
         flex: 100%;
         padding: 10px;
+    }
+
+    .page-title {
+        margin-left: 20px;
+        padding-top: 0.5px;
+        margin-top: 1px;
+        position: relative;
+        color: black;
+        width: 100%;
+        z-index: 0;
+    
     }
 }
 
