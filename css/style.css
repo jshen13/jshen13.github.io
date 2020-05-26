@@ -197,8 +197,6 @@ a:link {
 
 .profile-desc {
     text-align: center;
-    position: sticky;
-    top: 0;
     overflow: hidden;
     overflow-x: hidden;
     line-height: normal;
