@@ -1,0 +1,61 @@
+.classComponent {
+    padding-left: 30px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+/* @media screen and (max-width:600px){
+    .classComponent {
+        flex: 100%;
+        width: 100%;
+        background-color: red;
+        
+    }
+
+}
+
+
+@media screen and (min-width:600px){
+    .classComponent {
+        flex: 50%;
+        width: 50%;
+        background-color: aqua;
+
+    }
+
+}
+@media screen and (min-width:786px){
+    .classComponent {
+        flex: 10%;
+        width: 30%;
+        background-color: green;
+    }
+} */
+
+.classComponent h3 {
+    margin-top: 5px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.titleProf {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+}
+
+.titleProf hr {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+.notesFiles {
+    padding-left: 10px;
+}
+
+.classFiles {
+    flex: 33%;
+}

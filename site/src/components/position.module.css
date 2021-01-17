@@ -1,0 +1,53 @@
+.personalIntro {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding: 0px;
+}
+
+.intro {
+    flex: 65%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.introHeading {
+    display: flex;
+}
+
+.title {
+    flex: 60%;
+    float: left;
+}
+
+.title h2:hover {
+    text-decoration: underline;
+}
+
+.date {
+    flex: 40%;
+    float: right;
+    text-align: right;
+}
+
+
+.pic {
+    flex: 20%;
+    width: 100px;
+    float: right;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 6px;
+}
+
+.pic img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+
+}
+
+.date h3 {
+    font-weight: normal;
+}
+

@@ -8,11 +8,11 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
+import favicon from "../images/logos/logo2.png"
 import Header from "./header"
 import "./layout.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, siteTitle }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -25,23 +25,30 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <React.Fragment>
+      <Header siteTitle={siteTitle} />
+      <head>
+        <link rel="icon" href={favicon}></link>
+
+      </head>
       <div
         style={{
           margin: `0 auto`,
-          maxWidth: 960,
+          maxWidth: 1100,
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
         <main>{children}</main>
         <footer style={{
-          marginTop: `2rem`
+            marginTop: `2rem`,
+            textAlign: `center`
         }}>
-          © {new Date().getFullYear()}, Built with
+          Jeffrey Shen © {new Date().getFullYear()}, Built with
           {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          <a href="https://www.gatsbyjs.com" target="_blank">Gatsby</a>
         </footer>
-      </div>
+          </div>
+        </React.Fragment>
     </>
   )
 }

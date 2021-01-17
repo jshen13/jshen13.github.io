@@ -1,0 +1,149 @@
+.mainHome {
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+
+.mainVideo {
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+
+.mainVideo h1 {
+    /* color:#424242; */
+    /* color: white;
+    font-size: 50px;
+    opacity: 100%; */
+
+    
+
+     
+}
+
+.title {
+    padding: 6px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+
+    line-height: 60px;
+
+    background: 50% 100% / 50% 50% no-repeat
+            radial-gradient(ellipse at bottom, #ededed, transparent, transparent);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 60px;
+
+    animation: reveal 4000ms ease-in-out forwards 1000ms,
+                glow 2500ms linear infinite 2000ms;
+    
+
+
+
+}
+
+@keyframes reveal {
+    80% {
+        letter-spacing: 4px;
+    }
+    100% {
+    background-size: 400% 400%;
+    }
+}
+@keyframes glow {
+    40% {
+    text-shadow: 0 0 4px white; /* #fff; */
+    }
+}
+
+.mainVideo video {
+    position: relative;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.videoCenter {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    /* width: 350px;
+    height: 100px; */
+    transform: translate(-50%, -50%);
+}
+
+.aboutButton {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    
+    transform: translate(-50%, -50%);
+    width: 140px;
+    height: 50px;
+
+    opacity: 0;
+    animation: fade-in-right ease 2s forwards;
+    animation-delay: 5s;
+
+
+}
+
+@keyframes fade-in-right {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+.aboutButton button {
+    background-color: #f7f7f7; /* Green */
+    border-radius: 2px;
+    color: black;
+    /* padding: 10px 20px; */
+    width: 140px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    /* border: 2px solid #555555; */
+    border: none;
+
+}
+
+.borderAnimation svg {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    fill: none;
+    /* stroke: #fff; */
+    stroke: black;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1.5s ease-in-out;
+  }
+
+
+.aboutButton button:hover {
+    /* background-color: #292929; */
+    background-color: #424242;
+    color: white;
+    /* color: white; */
+    transition: 2s ease-in-out;
+    
+}
+
+.btn:hover svg {
+    stroke-dashoffset: -480;
+}
