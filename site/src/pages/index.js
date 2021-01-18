@@ -24,7 +24,6 @@ const IndexPage = ({ data }) => (
 
     <SEO title="Home" />
 
-    { console.log(window.innerWidth)}
     <div className={homeStyles.mainVideo}>
       <video autoPlay loop muted>
             {/* <source src={DroneCompressed} type="video/mov"/> */}
