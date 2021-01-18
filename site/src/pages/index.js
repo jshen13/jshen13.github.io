@@ -26,7 +26,6 @@ const IndexPage = ({ data }) => (
 
     <div className={homeStyles.mainVideo}>
       <video autoPlay loop muted>
-            {/* <source src={DroneCompressed} type="video/mov"/> */}
             <source src={DroneVideo} type="video/mp4"/>
         </video>
       <div className={homeStyles.videoCenter}>
@@ -93,16 +92,7 @@ const IndexPage = ({ data }) => (
           <a href="https://www.gatsbyjs.com" target="_blank">Gatsby</a>
     </footer>
     <br></br>
-    {/* <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div> */}
-    {/* <Link to="/page-2/">Go to page 2</Link> <br /> */}
-    {/* <Link to="/using-typescript/">Go to "Using TypeScript"</Link> <br /> */}
 
-    {/* <Link to="/notes/">Go to notes</Link> */}
 
 
   </div>
