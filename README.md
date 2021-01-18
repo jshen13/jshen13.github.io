@@ -10,21 +10,22 @@ Personal site and portfolio created with GatsbyJS using React. New Gatsby site i
 
  **Deploy Site**
 
-    Deploy the updated site.
+  Deploy the updated site.
 
-    ```shell
+  ```shell
     cd site
     npm run deploy
-    ```
+  ```
 
+    
  **Start developing.**
 
-    Navigate into your new site’s directory and start it up.
+  Navigate into your new site’s directory and start it up.
 
-    ```shell
-    cd site/
-    gatsby develop
-    ```
+  ```shell
+      cd site/
+      gatsby develop
+  ```
 
     Your site is now running at `http://localhost:8000`!
 
