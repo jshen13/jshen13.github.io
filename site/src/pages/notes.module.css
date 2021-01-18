@@ -1,0 +1,62 @@
+.semesterName {
+    margin-left: 15px;
+}
+.semesterName h1 {
+    padding: 0px;
+    margin: 0px;
+    padding-top: 20px;
+}
+
+.semesterName hr{
+    margin-right: 20px;
+}
+
+.classesRow {
+    display: flex;
+    flex-wrap: wrap;
+
+    padding-right: 20px;
+}
+
+.description {
+    padding: 5px;
+}
+
+.classes3 {
+    flex: 33%;
+}
+
+.classes4 {
+    flex: 50%;
+}
+
+@media screen and (max-width:680px){
+    .classes3 {
+        flex: 100%;
+        
+    }
+
+    .classes4 {
+        flex: 100%;
+    }
+
+}
+
+
+@media screen and (min-width:680px){
+    .classes3 {
+        flex: 50%;
+
+    }
+
+  
+
+}
+
+@media screen and (min-width:950px){
+    .classes3 {
+        flex: 33%;
+    }
+} 
+
+
