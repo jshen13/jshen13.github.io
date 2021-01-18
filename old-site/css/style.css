@@ -1,0 +1,709 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Signika', sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    /* background-image: url('../images/sf_bg.jpeg'); */
+
+
+}
+
+a:any-link {
+    text-decoration: none;
+    color: #4278ed;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #4278ed;
+}
+
+a:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color:#4278ed; /* #325e96;*/
+}
+
+.site-header {
+    margin: 58.4px auto;
+}
+
+.nav-bar {
+    background-color: black; /*#212121;*/
+    opacity: 0.855;
+    margin-top: 0;
+    position: fixed;
+    top: 0;
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 5;
+
+}
+
+.nav-bar ul {
+    display: block;
+    list-style-type: none;
+    margin: 0;
+    padding: 15px;
+    width: 100%;
+    overflow: hidden;
+    opacity: 1;
+
+  }
+
+.nav-bar li {
+    float: right;
+
+
+}
+
+.nav-bar li::after {
+    content: "/";
+    float: right;
+    color: #d4d4d4;
+}
+
+li:first-child::after {
+    content: "";
+    margin: 8px;
+
+}
+
+li a:hover {
+    font-weight: bolder;
+    color: white;
+}
+
+
+.nav-bar a {
+    padding: 15px;
+    color: #d4d4d4;
+}
+
+li .active {
+    color: white;
+    font-weight: bolder;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.nav-bar .icon {
+    display: none;
+  }
+
+/* @media screen and (max-width: 600px) {
+    .nav-bar li:not(:last-child) {display: none;}
+
+    .nav-bar li::after {
+        float: right;
+        color: #d4d4d4;
+    }
+
+    .nav-bar a.icon {
+      float: right;
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .nav-bar.responsive {position: relative;}
+    .nav-bar.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .nav-bar.responsive li {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  } */
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------- */
+/* Main Page */
+
+* {
+    box-sizing: border-box;
+    
+  }
+
+.row-home {
+    display: block;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profile {
+    position: fixed;
+    float: left;
+    width: 30%;
+    height: 100%;
+    flex: 30%;
+    /* overflow-x: hidden; Disable horizontal scroll */
+    background-color:#f3f3f3; /* #dfdfdf;*/
+    padding: 20px;
+    padding-top: 100px;
+    z-index: 1;
+
+    animation-duration: 3s;
+    animation-name: slideright;
+    /* overflow: hidden; */
+}
+
+@keyframes slideright {
+    from {
+      margin-right: 100%;
+      width: 10%; 
+    }
+  
+    to {
+      margin-right: 0%;
+      width: 30%;
+    }
+}
+
+.bio {
+    float: right;
+     /* #f5f5f5;  */
+    padding: 20px;
+    width: 70%;
+
+    
+
+
+}
+
+.profile-pic {
+    text-align: center;    
+}
+
+.pic {
+    border-radius: 10px;
+}
+
+.profile-desc {
+    text-align: center;
+    overflow: hidden;
+    overflow-x: hidden;
+    line-height: normal;
+    
+    opacity: 1;
+    overflow-wrap: initial;
+    /* animation-delay: 1.5s;
+    animation-duration: 3s;
+    animation-name: slideright-desc; */
+
+}
+
+@keyframes slideright-desc {
+    from {
+      margin-right: 100%;
+      width: 71%; 
+      opacity: 1;
+
+    }
+  
+    to {
+      width: 100%;
+      opacity: 1;
+      transform:translate(200px,100px);
+
+    }
+  }
+
+
+
+
+
+
+.profile-desc h1{
+    font-size: 45px;
+
+}
+
+.profile-icon-li {
+    margin: 10px;
+    opacity: 0.6;
+}
+
+.profile-icon-gh {
+    margin: 10px;
+    opacity: 0.6;
+    border-radius: 20px;
+}
+
+.profile-icon-gh:hover {
+    opacity: 1;
+    box-shadow: 2px 2px 10px white, -2px 2px 10px white, 2px -2px 10px white, -2px -2px 10px white;
+}
+
+.profile-icon-li:hover {
+    opacity: 1;
+    box-shadow: 2px 2px 10px white, -2px 2px 10px white, 2px -2px 10px white, -2px -2px 10px white;
+}
+
+  
+ 
+
+.intro {
+    padding-top: 150px;
+    padding-bottom: 120px;
+    
+    margin: 0;
+
+}
+
+.intro p{
+    padding-top: 20px;
+    font-size: 20px;
+
+}
+
+  
+@media screen and (max-width: 700px) {
+    .profile {
+        position: relative;
+        float: left;
+        width: 100%;
+        height: 100%;
+        flex: 100%;
+        /* overflow-x: hidden; Disable horizontal scroll */
+        background-color:#f3f3f3; /* #dfdfdf;*/
+        padding: 20px;
+        padding-top: 100px;
+    
+    
+        overflow: auto;
+    }
+
+    .bio {
+        float: right;
+         /* #f5f5f5;  */
+        padding: 20px;
+        width: 100%;
+    
+    }
+
+    .intro {
+        padding-top: 50px;
+        padding-bottom: 20px;
+        padding-left: 0px;
+        margin: 0;
+    
+    }
+
+    @keyframes slideright {
+        
+    }
+}
+
+.typewriter {
+    width: fit-content;
+    height: 80px;
+    background-color: #212121;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+
+}
+.typewriter h1 {
+    font-size: 40px;
+    height: fit-content;
+    height: 65px;
+    vertical-align: middle;
+    line-height: 65px;
+    text-align: center;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .075em solid #589afc; /*The typwriter cursor*/
+    white-space: nowrap; /*Keeps the content on a single line*/
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .07em; /* Adjust as needed */
+    animation: 
+      typing 3s steps(20, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #589afc; }
+  }
+
+.experience {
+    margin: 10px;
+    margin-top: 50px;
+    background-color: white;
+    animation: 2.75s slide-up;
+    overflow:hidden;
+
+
+
+
+}
+/* 
+div.slide-up {
+    height:200px;
+    overflow:hidden;
+  }
+  div.slide-up p {
+    animation: 10s slide-up;
+    margin-top:0%;
+  } */
+  
+  @keyframes slide-up {
+    from {
+      margin-top: 100%;
+      height: 300%; 
+    }
+  
+    to {
+      margin-top: 50px;
+      height: 100%;
+    }
+  }
+
+.position {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.pos-desc {
+    width: 80%;
+}
+
+.pos-logo {
+    width: 210px;
+    text-align: right;
+    border-radius: 10px;
+}
+
+.position ul {
+    display: block;
+    list-style-type: none;
+    margin: 0;
+    padding: 15px;
+    padding-left: 0px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+.position li {
+    float: left;
+}
+
+.position li:last-child {
+    float: right;
+}
+
+.position li a:hover {
+    font-weight: bolder;
+    color: #4278ed;
+}
+
+
+.footer {
+    padding: 20px; /* Some padding */
+    text-align: center; /* Center text*/
+    
+    /* background: #ddd; Grey background */
+  }
+
+.bio .experience hr.exp {
+    padding: 0;
+}
+
+@media screen and (max-width: 700px) {
+    .pos-logo {
+        width: 100px;
+        height: 100px;
+        text-align: right;
+        border-radius: 10px;
+    }
+
+    .pos-desc {
+        width: 100%;
+    }
+
+    .typewriter {
+        width: fit-content;
+        height: 75px;
+        background-color: #212121;
+        color: white;
+        padding: 10px;
+        border-radius: 8px;
+        margin-bottom: 40px;
+    
+    }
+    .typewriter h1 {
+        font-size: 32px;
+        height: fit-content;
+        height: 60px;
+        vertical-align: middle;
+        line-height: 60px;
+        text-align: center;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .075em solid #589afc; /*The typwriter cursor*/
+        white-space: nowrap; /*Keeps the content on a single line*/
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .07em; /* Adjust as needed */
+        animation: 
+          typing 3s steps(20, end),
+          blink-caret .75s step-end infinite;
+      }
+    
+    
+}
+
+
+/* ----------------------------------------------------------------------------------------------------- */
+/* notes.html styling */
+
+.page-title {
+    margin-left: 20px;
+    padding-top: 0.5px;
+    margin-top: 1px;
+    position: sticky;
+    top: 0;
+    color: black;
+    width: 30%;
+    z-index: 6;
+
+}
+.element {
+	text-shadow:
+		-1px -1px 0 white,
+		1px -1px 0 white,
+		-1px 1px 0 white,
+		1px 1px 0 white;
+}
+.row-title {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+}
+.class-3 {
+    /* padding: 20px; */
+    padding-left: 20px;
+    padding-top: 0px;
+    flex: 30%;
+    border-radius: 20px;
+    margin: 15px;
+
+    background-color: lightgrey;
+}
+
+@media screen and (max-width: 500px) {
+    .class-3 {
+        padding-left: 20px;
+        padding-top: 0px;
+        flex: 100%;
+        border-radius: 20px;
+        margin: 15px;
+
+        background-color: lightgrey;      
+    }
+
+    .page-title {
+        margin-left: 20px;
+        padding-top: 0.5px;
+        margin-top: 1px;
+        position: relative;
+        color: black;
+        width: 100%;
+        z-index: 0;
+    
+    }
+  }
+
+
+.class-title {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+
+.class-3 a:hover {
+    text-decoration: none;
+    color:#3879e0; /*#5693f5; /* #325e96; /*#3c69a3;*/
+}
+
+hr {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 0px;
+}
+
+/* ----------------------------------------------------------------------------------------------------- */
+/* art.html styling */
+
+
+.button {
+    background-color: white; /* Green */
+    border-radius: 6px;
+    color: black;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: 2px solid #555555;
+
+}
+  
+.button:hover {
+    background-color: #292929;
+    color: white;
+}
+
+.art-title {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+
+.gallery {
+    background-color: black;
+}
+.art-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    justify-content: center;
+
+}
+
+.art-3 {
+    flex: 33.3%;
+    padding: 10px;
+}
+
+.art-2 {
+    flex: 50%;
+    padding: 10px;
+}
+
+
+@media screen and (max-width: 800px) {
+    .art-3 {
+        flex: 50%;
+        padding: 10px;      
+    }
+  }
+
+
+
+@media screen and (max-width: 500px) {
+    .art-3 {
+        flex: 100%;
+        padding: 10px;      
+    }
+
+    .art-2 {
+        flex: 100%;
+        padding: 10px;
+    }
+
+    .page-title {
+        margin-left: 20px;
+        padding-top: 0.5px;
+        margin-top: 1px;
+        position: relative;
+        color: black;
+        width: 100%;
+        z-index: 0;
+    
+    }
+}
+
+
+
+
+/* Popup container */
+.popup {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  /* The actual popup (appears on top) */
+  .popup .popuptext {
+    visibility: hidden;
+    /* width: 100%; */
+    background-color: #242424;
+    opacity: 0.75;
+    color: #fff;
+    text-align: center;
+    
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+  }
+  
+  /* Popup arrow */
+  /* .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  } */
+  
+  /* Toggle this class when clicking on the popup container (hide and show the popup) */
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 0.4s;
+    animation: fadeIn 0.4s
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 0.75;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:0.75 ;}
+  }
+
+
+

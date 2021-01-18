@@ -1,0 +1,43 @@
+.aboutButtons {
+    text-align: center;
+}
+
+.aboutButtons button {
+
+    background-color: white; /* Green */
+    border-radius: 6px;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: 2px solid #555555;
+}
+
+.aboutButtons button:hover {
+    background-color: #292929;
+    color: white;
+}
+
+
+.linkedInButton {
+    display: inline;
+    margin-right: 20px;
+}
+
+.linkedInButton button:hover {
+    background-color: #003891;
+    color: white;
+}
+
+.githubButton {
+    margin-left: 20px;
+}
+
+
+
+
