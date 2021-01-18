@@ -41,19 +41,19 @@ export default function Art() {
         <div className={artStyles.artRow}>
             <div className={artStyles.art3}>
                 
-                            <img onmouseover={'hell'} onmouseout={'o'} src={sf_road} />
+                            <img src={sf_road} />
                 <div className={artStyles.popup} >
                     <span className={artStyles.popuptext} id="sfPP">SF Street, Pastel, 10/11/17</span>
                 </div>
             </div>
             <div className={artStyles.art3}>
-                        <img onmouseover="showDesc('bellPP')" onmouseout="hideDesc('bellPP')" src={bell}/>
+                        <img src={bell}/>
                 <div className={artStyles.popup} >
                     <span className={artStyles.popuptext} id="bellPP">Bell, Pastel</span>
                 </div>
             </div>
             <div className={artStyles.art3}>
-                        <img onmouseover="showDesc('cbPP')" onmouseout="hideDesc('cbPP')" src={colorBoat}/>
+                        <img src={colorBoat}/>
                 <div className={artStyles.popup} >
                     <span className={artStyles.popuptext} id="cbPP">Riverboats, Pastel, 1/14/17</span>
                 </div>

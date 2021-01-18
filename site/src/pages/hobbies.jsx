@@ -23,12 +23,12 @@ const Hobbies = ({ data }) => (
             Tank
         ]} />
         
-        <Activity title="Videos" buttonName="View Videos on YouTube" buttonLink="https://www.youtube.com/channel/UCUIydvu3NyNOVkrfcwuYCqg" description={<p>I enjoy video editing and flying drones for fun. I've mostly been making travel montage videos.</p>} images={[
+        <Activity title="Videos" buttonName="View Videos on YouTube" buttonLink="https://www.youtube.com/channel/UCUIydvu3NyNOVkrfcwuYCqg" buttonColor="#e62727" description={<p>I enjoy video editing and flying drones for fun. I've mostly been making travel montage videos.</p>} images={[
             DronePic
         ]}
         />
         
-        <Activity title="Golf" description={ <p>I've been an avid golf player since I was 8 and played on my High School's Varsity Team. <a href="https://www.losverdesgc.com/" target="_blank">Los Verdes Golf Course </a> will always be my home course. </p>}images={[
+        <Activity title="Golf" description={ <p>I've been an avid golf player since I was 8 and played on my High School's Varsity Team. </p>}images={[
             GolfPhoto
         ]}/>
     </Layout>

@@ -5,7 +5,7 @@ import activityStyles from "./activity.module.css"
 import { Link } from "gatsby"
 
 
-export default function Activity({ data, title, description, images, buttonLink, buttonName, videos }) {
+export default function Activity({ data, title, description, images, buttonLink, buttonName, videos, buttonColor }) {
 
     return (
         <div className={activityStyles.activityComponent}>
@@ -16,7 +16,7 @@ export default function Activity({ data, title, description, images, buttonLink,
             <div className={activityStyles.mainRow}>
                 <div className={activityStyles.description}>
                     <p>{description}</p>
-                    {buttonName && <div className={activityStyles.moreButton}>
+                    {buttonName && <div className={buttonColor?activityStyles.redButton: activityStyles.moreButton}>
                         <Link to={buttonLink} target="_blank"><button>{buttonName}</button></Link>
                     </div>}
                     {images && images.length > 1 && <div className={activityStyles.bottomRow}>

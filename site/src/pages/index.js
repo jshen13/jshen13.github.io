@@ -3,9 +3,7 @@ import { Link } from "gatsby"
 import { graphql } from 'gatsby'
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
-import Video from "../components/video"
 import Header from "../components/header"
 import Intro from "../components/intro"
 
@@ -14,13 +12,19 @@ import DroneVideo from "../videos/redondo_drone1080.mp4"
 import { FiChevronRight } from "react-icons/fi"
 import PersonalPic from "../images/personal.jpg"
 import { FaLinkedin, FaGithub } from "react-icons/fa"
+import BoatPier from "../images/art/boat_pier.jpg"
+import DronePic from "../images/drone_wave.jpg"
+import DronePVPic from "../images/drone_pv.jpg"
 
 
 const IndexPage = ({ data }) => (
+ 
   <div className={homeStyles.mainHome}>
     <Header siteTitle="Home"/>
 
     <SEO title="Home" />
+
+    { console.log(window.innerWidth)}
     <div className={homeStyles.mainVideo}>
       <video autoPlay loop muted>
             {/* <source src={DroneCompressed} type="video/mov"/> */}
@@ -48,8 +52,8 @@ const IndexPage = ({ data }) => (
         </div>
     </div>
     
-
-    <Intro image={PersonalPic} title="Hello!" desc={data.site.siteMetadata.info + " I've done a couple internships at large corporations like Northrop Grumman and startups. I also enjoy golfing, flying drones, and drawing."}  buttons={[
+    <div className={homeStyles.rest}>
+      <Intro image={PersonalPic} title="Hello!" desc={data.site.siteMetadata.info + " I've completed a couple software engineering internships at various companies. I also enjoy golfing, flying drones, and drawing."}  buttons={[
                     {
                         name: <React.Fragment>LinkedIn <FaLinkedin style={{ transform: "translateY(+14%)" }}/></React.Fragment>,
                         link: "https://linkedin.com/in/jshen13"
@@ -57,10 +61,39 @@ const IndexPage = ({ data }) => (
                     {
                         name: <React.Fragment>Github <FaGithub style={{ transform: "translateY(+14%)" }}/></React.Fragment>,
                         link: "https://github.com/jshen13",
-                        icon: FaGithub
                     }
-                ]} />
+      ]} />
+      
+      <div className={homeStyles.pictures}>
+        <div className={homeStyles.gallery3}>
+          <img src={BoatPier}></img>
+        </div>
 
+        <div className={homeStyles.gallery3}>
+          <img src={DronePic}></img>
+        </div>
+
+        <div className={homeStyles.gallery3}>
+          <img src={DronePVPic}></img>
+        </div>
+
+      </div>
+
+        
+      
+    </div>
+                
+
+
+    <footer style={{
+            marginTop: `2rem`,
+            textAlign: `center`
+        }}>
+          Jeffrey Shen © {new Date().getFullYear()}, Built with
+          {` `}
+          <a href="https://www.gatsbyjs.com" target="_blank">Gatsby</a>
+    </footer>
+    <br></br>
     {/* <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>

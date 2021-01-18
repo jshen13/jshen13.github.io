@@ -46,6 +46,31 @@
     color: white;
 }
 
+.redButton {
+
+    text-align: center;
+}
+
+.redButton button {
+    background-color: white; /* Green */
+    border-radius: 6px;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: 2px solid #555555;
+}
+
+.redButton button:hover {
+    background-color: #c21919; /* #e62727; */
+    color: white;
+}
+
 .rightImage {
     margin: 10px;
     width: 350px;

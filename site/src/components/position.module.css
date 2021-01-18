@@ -13,11 +13,16 @@
 
 .introHeading {
     display: flex;
+    margin-top: 20px;
 }
 
 .title {
     flex: 60%;
     float: left;
+}
+
+.title h2 {
+    margin-bottom: 0px;
 }
 
 .title h2:hover {

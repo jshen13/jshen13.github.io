@@ -11,16 +11,6 @@
     height: auto;
 }
 
-.mainVideo h1 {
-    /* color:#424242; */
-    /* color: white;
-    font-size: 50px;
-    opacity: 100%; */
-
-    
-
-     
-}
 
 .title {
     padding: 6px;
@@ -29,7 +19,7 @@
     backdrop-filter: blur(10px);
     border-radius: 5px;
 
-    line-height: 60px;
+    line-height: 65px;
 
     background: 50% 100% / 50% 50% no-repeat
             radial-gradient(ellipse at bottom, #ededed, transparent, transparent);
@@ -37,21 +27,25 @@
     background-clip: text;
     color: transparent;
     font-size: 60px;
+    opacity: 0;
 
     animation: reveal 4000ms ease-in-out forwards 1000ms,
                 glow 2500ms linear infinite 2000ms;
     
 
-
-
 }
 
 @keyframes reveal {
+    20% {
+        opacity: 1;
+    }
     80% {
         letter-spacing: 4px;
+        opacity: 1;
     }
     100% {
     background-size: 400% 400%;
+    opacity: 1;
     }
 }
 @keyframes glow {
@@ -89,13 +83,13 @@
     height: 50px;
 
     opacity: 0;
-    animation: fade-in-right ease 2s forwards;
+    animation: fade-in ease 2s forwards;
     animation-delay: 5s;
 
 
 }
 
-@keyframes fade-in-right {
+@keyframes fade-in {
     from {
       opacity: 0;
     }
@@ -147,3 +141,45 @@
 .btn:hover svg {
     stroke-dashoffset: -480;
 }
+
+
+@media screen and (max-width:700px){
+    .mainVideo video {
+        position: relative;
+        height: 100vh;
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+}
+
+.rest {
+
+    margin: 0 auto;
+    margin-top: 30px;
+    max-width: 1100px;
+    padding: 0 1.0875rem 1.45rem;
+}
+
+.pictures {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.gallery3 {
+    padding: 10px;
+    max-height: 200px;
+    margin: auto;
+}
+
+.gallery3 img {
+    max-height: 200px;
+    width: auto;
+}
+
