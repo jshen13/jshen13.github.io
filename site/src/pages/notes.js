@@ -22,6 +22,12 @@ import cs61c_fs from "../files/fa20/cs61c_fs.pdf"
 import cs61c_notes from "../files/fa20/cs61c_notes.pdf"
 import physics7b_sg from "../files/fa20/physics7b_sg.pdf"
 import ugba135_notes from "../files/fa20/ugba135_notes.pdf" 
+
+import cs188_sg from "../files/sp21/cs188_sg.pdf"
+import data100_sg from "../files/sp21/data100_sg.pdf"
+import cs162_fs from "../files/sp21/cs162_fs.pdf"
+
+
 import Layout from "../components/layout"
 
 
@@ -152,17 +158,26 @@ export default function Notes({ data }) {
             <div className={notesStyles.classesRow}>
                 <div className={notesStyles.classes3}>
                 <ClassNotes title="CS 188" prof="Russell & Song" notes={
-                []
+                [{
+                    title: "Midterm 1 Study Guide",
+                    file: cs188_sg
+                }]
                 } /></div>
                 
                 <div className={notesStyles.classes3}>
                 <ClassNotes title="DATA C100" prof="Bray & Gonzalez" notes={
-                []
+                [{
+                    title: "Midterm 1 Study Guide",
+                    file: data100_sg
+                }]
                 } /></div>
                 
                 <div className={notesStyles.classes3}>
                 <ClassNotes title="CS 162" prof="Crooks & Joseph" notes={
-                []
+                [{
+                    title: "Midterm Formula Sheets",
+                    file: cs162_fs
+                }]
                 } /></div>
             </div>  
         )
