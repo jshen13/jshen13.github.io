@@ -62,7 +62,6 @@ const SecondPage = ({data}) => (
                     topicList: [
                         {
                             name: "Algorithms and Intractable Problems",
-                            
                             links: [{
                                 key: 1,
                                 abbrev: "CS 170",
@@ -110,13 +109,13 @@ const SecondPage = ({data}) => (
                             links: [{
                                 key: 1,
                                 abbrev: "EECS 16A",
-                                link: "http://www-inst.eecs.berkeley.edu/~cs61b/sp20/"
+                                link: "https://inst.eecs.berkeley.edu/~ee16a/fa19/"
                             },
                             {
 
                                 key: 2,
                                 abbrev: "EECS 16B",
-                                link: "http://www-inst.eecs.berkeley.edu/~cs61b/sp20/"
+                                link: "https://inst.eecs.berkeley.edu/~ee16b/sp20/"
                             }]
                             
                         }
@@ -135,7 +134,11 @@ const SecondPage = ({data}) => (
                         }, {
                             name: "UAVs@Berkeley",
                             link: "https://uav.berkeley.edu/"
-                        }
+                        }, {
+                            name: "Chinese Student Association",
+                            link: "https://csa.berkeley.edu/"
+                        },
+                        
                     ]
                 }
             ]}/>
