@@ -37,13 +37,16 @@ export default function Intro({ data, title, date, image, imgAlt, desc, link, bu
             
             {buttons && <div className={introStyles.aboutButtons}>
                 <div className={introStyles.linkedInButton}>
-
                     <Link to={buttons[0].link} target="_blank">
                         <button>{buttons[0].name} </button>
                     </Link>
                 </div>
-                
-                <Link to={buttons[1].link} target="_blank"><button>{buttons[1].name}</button></Link>
+              
+          <div className={introStyles.githubButton}>  
+          <Link to={buttons[1].link} target="_blank"><button>{buttons[1].name}</button></Link>
+            </div>
+          
+          {buttons.length > 2 && <a href={buttons[2].link} target="_blank"><button>{buttons[2].name}</button></a>}
                     </div>}
                     {images && images.length > 1 && <div className={activityStyles.bottomRow}>
                         <div className={activityStyles.bottomImage}>

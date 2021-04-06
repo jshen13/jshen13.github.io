@@ -23,6 +23,7 @@ import DronePic from "../images/drone_wave.jpg"
 import GolfPhoto from "../images/golf_trophy.jpg"
 import { FaLinkedin, FaGithub } from "react-icons/fa"
 import { transform } from "typescript"
+import resume from "../files/resume.pdf"
 
 const SecondPage = ({data}) => (
   <Layout siteTitle="About">
@@ -41,6 +42,9 @@ const SecondPage = ({data}) => (
                         name: <React.Fragment>Github <FaGithub style={{ transform: "translateY(+14%)" }}/></React.Fragment>,
                         link: "https://github.com/jshen13",
                         icon: FaGithub
+                    }, {
+                        name: "Resume",
+                        link: resume,
                     }
                 ]} />
             </div>
