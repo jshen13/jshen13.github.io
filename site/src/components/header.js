@@ -46,7 +46,7 @@ export default function Header({ data, siteTitle }) {
   
 return (
 <header className={headerStyles.siteHeader}>
-
+<meta property="og:image" content={logo} />
 <nav className={headerStyles.navBar} id="myTopnav" >
 <ul>
 <li  ><Link className={isActiveTab("About")} to="/about/">About</Link>

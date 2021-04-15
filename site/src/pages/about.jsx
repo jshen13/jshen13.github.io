@@ -42,10 +42,11 @@ const SecondPage = ({data}) => (
                         name: <React.Fragment>Github <FaGithub style={{ transform: "translateY(+14%)" }}/></React.Fragment>,
                         link: "https://github.com/jshen13",
                         icon: FaGithub
-                    }, {
-                        name: "Resume",
-                        link: resume,
                     }
+                    // , {
+                    //     name: "Resume",
+                    //     link: resume,
+                    // }
                 ]} />
             </div>
             
