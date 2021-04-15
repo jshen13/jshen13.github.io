@@ -45,7 +45,11 @@ const Layout = ({ children, siteTitle }) => {
         }}>
           Jeffrey Shen © {new Date().getFullYear()}, Built with
           {` `}
-          <a href="https://www.gatsbyjs.com" target="_blank">Gatsby</a>
+            <a href="https://www.gatsbyjs.com" target="_blank">Gatsby</a>
+            ,
+            {` `}
+          <a href="https://github.com/jshen13/jshen13.github.io" target="_blank"> Github Repo</a>
+
         </footer>
           </div>
         </React.Fragment>
