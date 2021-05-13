@@ -26,7 +26,9 @@ import ugba135_notes from "../files/fa20/ugba135_notes.pdf"
 import cs188_sg from "../files/sp21/cs188_sg.pdf"
 import data100_sg from "../files/sp21/data100_sg.pdf"
 import cs162_fs from "../files/sp21/cs162_fs.pdf"
-
+import cs162_notes from "../files/sp21/cs162_notes.pdf"
+import cs188_notes from "../files/sp21/cs188_notes.pdf"
+import data100_notes from "../files/sp21/data100_notes.pdf"
 
 import Layout from "../components/layout"
 
@@ -159,7 +161,11 @@ export default function Notes({ data }) {
                 <div className={notesStyles.classes3}>
                 <ClassNotes title="CS 188" prof="Russell & Song" notes={
                 [{
-                    title: "Midterm 1 Study Guide",
+                    title: "Class Notes",
+                    file: cs188_notes
+                },
+                {
+                    title: "Final Study Guide",
                     file: cs188_sg
                 }]
                 } /></div>
@@ -167,7 +173,11 @@ export default function Notes({ data }) {
                 <div className={notesStyles.classes3}>
                 <ClassNotes title="DATA C100" prof="Bray & Gonzalez" notes={
                 [{
-                    title: "Midterm 1 Study Guide",
+                    title: "Class Notes",
+                    file: data100_notes
+                },
+                {
+                    title: "Final Study Guide",
                     file: data100_sg
                 }]
                 } /></div>
@@ -175,8 +185,12 @@ export default function Notes({ data }) {
                 <div className={notesStyles.classes3}>
                 <ClassNotes title="CS 162" prof="Crooks & Joseph" notes={
                 [{
-                    title: "Midterm Formula Sheets",
-                    file: cs162_fs
+                    title: "Class Notes",
+                    file: cs162_notes
+                },
+                {
+                    title: "Final Formula Sheet",
+                    file: cs162_fs,
                 }]
                 } /></div>
             </div>  

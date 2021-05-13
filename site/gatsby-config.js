@@ -3,7 +3,8 @@ module.exports = {
     title: `Jeffrey Shen`,
     description: `About Jeffrey Shen's experience and activites.`,
     info: `I'm a second-year at UC Berkeley studying Electrical Engineering and Computer Science from LA. I love keeping up with technology & software and I'm currently pursuing a career in software engineering.`,
-    author: `@jshen13`,
+    author: `@jshen_13`,
+    image: `/logo.png`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

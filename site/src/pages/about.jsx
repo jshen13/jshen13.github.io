@@ -66,6 +66,30 @@ const SecondPage = ({data}) => (
                     title: "Courses",
                     topicList: [
                         {
+                            name: "Introduction to Artificial Intelligence",
+                            links: [{
+                                key: 1,
+                                abbrev: "CS 188",
+                                link: "https://inst.eecs.berkeley.edu/~cs188/sp21/"
+                            }] 
+                        },
+                        {
+                            name: "Operating Systems and Systems Programming",
+                            links: [{
+                                key: 1,
+                                abbrev: "CS 162",
+                                link: "https://cs162.org/"
+                            }] 
+                        },
+                        {
+                            name: "Principles and Techniques of Data Science",
+                            links: [{
+                                key: 1,
+                                abbrev: "Data 100",
+                                link: "https://ds100.org/sp21/"
+                            }] 
+                        },
+                        {
                             name: "Algorithms and Intractable Problems",
                             links: [{
                                 key: 1,

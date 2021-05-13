@@ -55,6 +55,10 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
+          property: `og:image`,
+          content: favicon,
+        },
+        {
           property: `og:type`,
           content: `website`,
         },
