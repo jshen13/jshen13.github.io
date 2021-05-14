@@ -89,10 +89,10 @@ const IndexPage = ({ data }) => (
         }}>
           Jeffrey Shen © {new Date().getFullYear()}, Built with
           {` `}
-          <a href="https://www.gatsbyjs.com" target="_blank">Gatsby</a>
-          ,
+          <a href="https://www.gatsbyjs.com" target="_blank" rel="noreferrer">Gatsby</a>
+          
           {` `}
-          <a href="https://github.com/jshen13/jshen13.github.io" target="_blank"> Github Repo</a>
+          (<a href="https://github.com/jshen13/jshen13.github.io" target="_blank" rel="noreferrer">Github Repo</a>)
     </footer>
     <br></br>
 

@@ -29,6 +29,7 @@ import cs162_fs from "../files/sp21/cs162_fs.pdf"
 import cs162_notes from "../files/sp21/cs162_notes.pdf"
 import cs188_notes from "../files/sp21/cs188_notes.pdf"
 import data100_notes from "../files/sp21/data100_notes.pdf"
+import sociol121_notes from "../files/sp21/sociol121_notes.pdf"
 
 import Layout from "../components/layout"
 
@@ -191,6 +192,14 @@ export default function Notes({ data }) {
                 {
                     title: "Final Formula Sheet",
                     file: cs162_fs,
+                }]
+                } /></div>
+
+                <div className={notesStyles.classes3}>
+                <ClassNotes title="SOCIOL 121" prof="Ivester" notes={
+                [{
+                    title: "Class Notes",
+                    file: sociol121_notes
                 }]
                 } /></div>
             </div>  

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { graphql } from 'gatsby'
-import Img from "gatsby-image"
 import activityStyles from "./activity.module.css"
 import { Link } from "gatsby"
 
