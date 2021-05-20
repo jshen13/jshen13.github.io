@@ -9,6 +9,7 @@ import Intro from "../components/intro"
 
 import homeStyles from "./index.module.css"
 import DroneVideo from "../videos/redondo_drone1080.mp4"
+import DroneVideoAlt from "../videos/video_alt.png"
 import { FiChevronRight } from "react-icons/fi"
 import PersonalPic from "../images/personal.jpg"
 import { FaLinkedin, FaGithub } from "react-icons/fa"
@@ -26,7 +27,8 @@ const IndexPage = ({ data }) => (
 
     <div className={homeStyles.mainVideo}>
       <video autoPlay loop muted>
-            <source src={DroneVideo} type="video/mp4"/>
+        <source src={DroneVideo} type="video/mp4" />
+        <img id="alternative" src={DroneVideoAlt} />
         </video>
       <div className={homeStyles.videoCenter}>
         <div className={homeStyles.title}>

@@ -56,11 +56,15 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: favicon,
+          content: `//jshen13.github.io/logo.png`,
         },
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: `og:url`,
+          content: `//www.jshen13.github.io`
         },
         {
           name: `twitter:card`,
