@@ -10,6 +10,7 @@ import Intro from "../components/intro"
 
 import aboutStyles from "./about.module.css"
 import personalPic from "../images/personal.jpg"
+import qcLogo from "../images/logos/qualcomm.png"
 import ngLogo from "../images/logos/ng.jpg"
 import harmonyLogo from "../images/logos/harmony.jpg"
 import boeingLogo from "../images/logos/boeing.png"
@@ -52,6 +53,8 @@ const SecondPage = ({data}) => (
             
             <h1>Experience</h1>
             <hr></hr>
+            <Position image={qcLogo} title="Qualcomm" link="https://www.qualcomm.com/" date="Summer 2021" desc="I interned at Qualcomm in San Diego, CA working remotely as a software engineering intern on the 5G Modem Software Team. As part of the sleep team, I created a comprehensive and automated test framework for a sleep prediction algorithm using C/C++, Python, and XML. This framework was able to allow quicker testing and iteration of the algorithm. I then created a Python Jupyter Notebook script to analyze and visualize the data from the sleep prediction algorithm, making recommendations for specific algorithms."  />
+
             <Position image={ngLogo} title="Northrop Grumman" link="https://www.northropgrumman.com/" desc="I interned at Northrop Grumman in Redondo Beach, CA working remotely as a software engineering intern. I wrote backend API routes for Dash.ible, a Dashboard for Ansible web app that monitors and configures virtual machines (VMs) using Node.js, allowing MongoDB queries and Ansible roles to be deployed on VMs. I also supported frontend development by creating a dynamic table of VM performance metrics using Angular and implemented functionality on side panes with additional VM and role information by connecting it to the backend." date="Summer 2020" />
             
             <Position image={harmonyLogo} title="Harmony" link="https://www.harmony.one/" desc="I was an Engineering Intern at Harmony in Mountain View, CA. I developed a Python script for testing cross-shard transactions on the Harmony blockchain. Using the Command Line Interface, I set up a wallet and helped load the network for stress testing." date="Winter 2019" />

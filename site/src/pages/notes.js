@@ -206,6 +206,34 @@ export default function Notes({ data }) {
         )
     }
 
+    function fall21() {
+        return (
+            <div className={notesStyles.classesRow}>
+                <div className={notesStyles.classes3}>
+                <ClassNotes title="CS 194-26" prof="Efros & Kanazawa" notes={
+                [
+                    
+                ]
+                } /></div>
+                
+                <div className={notesStyles.classes3}>
+                <ClassNotes title="EECS 127" prof="El Ghaoui" notes={
+                []
+                } /></div>
+
+                <div className={notesStyles.classes3}>
+                <ClassNotes title="CS 161" prof="Popa & Weaver" notes={
+                []
+                } /></div>
+
+                <div className={notesStyles.classes3}>
+                <ClassNotes title="Psych 160" prof="Chen" notes={
+                []
+                } /></div>
+            </div>  
+        )
+    }
+
 
     return (
         <div>
@@ -214,7 +242,8 @@ export default function Notes({ data }) {
             <div className={notesStyles.description}>
                 <p>These are a compilation of my notes, study guides, and exam formula sheets from classes. </p>  
             </div>
-            
+            {semesterHeading("Fall 2021")}
+            {fall21()}
             {semesterHeading("Spring 2021")}
             {spring21()}
             {semesterHeading("Fall 2020")}
