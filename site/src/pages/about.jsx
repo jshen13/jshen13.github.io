@@ -69,6 +69,30 @@ const SecondPage = ({data}) => (
                     title: "Courses",
                     topicList: [
                         {
+                            name: "Introduction to Computer Vision and Computational Photography",
+                            links: [{
+                                key: 1,
+                                abbrev: "CS 194-26",
+                                link: "https://inst.eecs.berkeley.edu/~cs194-26/fa21/"
+                            }] 
+                        },
+                        {
+                            name: "Optimization Models in Engineering",
+                            links: [{
+                                key: 1,
+                                abbrev: "EECS 127",
+                                link: "https://inst.eecs.berkeley.edu/~eecs127/fa20/"
+                            }] 
+                        },
+                        {
+                            name: "Computer Security",
+                            links: [{
+                                key: 1,
+                                abbrev: "CS 161",
+                                link: "https://cs161.org/"
+                            }] 
+                        },
+                        {
                             name: "Introduction to Artificial Intelligence",
                             links: [{
                                 key: 1,
