@@ -31,6 +31,14 @@ import cs188_notes from "../files/sp21/cs188_notes.pdf"
 import data100_notes from "../files/sp21/data100_notes.pdf"
 import sociol121_notes from "../files/sp21/sociol121_notes.pdf"
 
+import cs161_fs from "../files/fa21/cs161_fs.pdf"
+import cs161_notes from "../files/fa21/cs161_notes.pdf"
+import cs194_fs from "../files/fa21/cs194-26_fs.pdf"
+import cs194_notes from "../files/fa21/cs194-26_notes.pdf"
+import eecs127_fs from "../files/fa21/eecs127_fs.pdf"
+import eecs127_notes from "../files/fa21/eecs127_notes.pdf"
+import psych160_notes from "../files/fa21/psych160_notes.pdf"
+
 import Layout from "../components/layout"
 
 
@@ -211,23 +219,70 @@ export default function Notes({ data }) {
             <div className={notesStyles.classesRow}>
                 <div className={notesStyles.classes3}>
                 <ClassNotes title="CS 194-26" prof="Efros & Kanazawa" notes={
-                [
-                    
-                ]
+                [{
+                    title: "Class Notes",
+                    file: cs194_notes
+                },
+                {
+                    title: "Midterm Formula Sheet",
+                    file: cs194_fs,
+                },
+                {
+                    title: "Projects",
+                    file: "https://inst.eecs.berkeley.edu/~cs194-26/fa21/upload/files/projFinalAssigned/cs194-26-aeo/",
+                }]
                 } /></div>
                 
                 <div className={notesStyles.classes3}>
                 <ClassNotes title="EECS 127" prof="El Ghaoui" notes={
-                []
+                [{
+                    title: "Class Notes",
+                    file: eecs127_notes
+                },
+                {
+                    title: "Final Formula Sheet",
+                    file: eecs127_fs,
+                }]
                 } /></div>
 
                 <div className={notesStyles.classes3}>
                 <ClassNotes title="CS 161" prof="Popa & Weaver" notes={
-                []
+                [{
+                    title: "Class Notes",
+                    file: cs161_notes
+                },
+                {
+                    title: "Final Formula Sheet",
+                    file: cs161_fs,
+                }]
                 } /></div>
 
                 <div className={notesStyles.classes3}>
                 <ClassNotes title="Psych 160" prof="Chen" notes={
+                [{
+                    title: "Class Notes",
+                    file: psych160_notes
+                }]
+                } /></div>
+            </div>  
+        )
+    }
+
+    function spring22() {
+        return (
+            <div className={notesStyles.classesRow}>
+                <div className={notesStyles.classes3}>
+                <ClassNotes title="CS 189" prof="Shewchuk" notes={
+                []
+                } /></div>
+                
+                <div className={notesStyles.classes3}>
+                <ClassNotes title="CS 184" prof="Ng" notes={
+                []
+                } /></div>
+
+                <div className={notesStyles.classes3}>
+                <ClassNotes title="LS C160V" prof="Keltner" notes={
                 []
                 } /></div>
             </div>  
@@ -242,6 +297,8 @@ export default function Notes({ data }) {
             <div className={notesStyles.description}>
                 <p>These are a compilation of my notes, study guides, and exam formula sheets from classes. </p>  
             </div>
+            {semesterHeading("Spring 2022")}
+            {spring22()}
             {semesterHeading("Fall 2021")}
             {fall21()}
             {semesterHeading("Spring 2021")}
