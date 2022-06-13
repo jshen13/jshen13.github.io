@@ -9,7 +9,8 @@ import School from "../components/school"
 import Intro from "../components/intro"
 
 import aboutStyles from "./about.module.css"
-import personalPic from "../images/personal.jpg"
+import personalPic from "../images/personal2.jpg"
+import googleLogo from "../images/logos/google.png"
 import qcLogo from "../images/logos/qualcomm.png"
 import ngLogo from "../images/logos/ng.jpg"
 import harmonyLogo from "../images/logos/harmony.jpg"
@@ -53,6 +54,8 @@ const SecondPage = ({data}) => (
             
             <h1>Experience</h1>
             <hr></hr>
+            <Position image={googleLogo} title="Google" link="https://about.google/" date="Summer 2022" desc="I'm interning at Google in Mountain View, CA working as a software engineering intern on the Google Nest Team. "  />
+
             <Position image={qcLogo} title="Qualcomm" link="https://www.qualcomm.com/" date="Summer 2021" desc="I interned at Qualcomm in San Diego, CA working remotely as a software engineering intern on the 5G Modem Software Team. As part of the sleep team, I created a comprehensive and automated test framework for a sleep prediction algorithm using C/C++, Python, and XML. This framework was able to allow quicker testing and iteration of the algorithm. I then created a Python Jupyter Notebook script to analyze and visualize the data from the sleep prediction algorithm, making recommendations for specific algorithms."  />
 
             <Position image={ngLogo} title="Northrop Grumman" link="https://www.northropgrumman.com/" desc="I interned at Northrop Grumman in Redondo Beach, CA working remotely as a software engineering intern. I wrote backend API routes for Dash.ible, a Dashboard for Ansible web app that monitors and configures virtual machines (VMs) using Node.js, allowing MongoDB queries and Ansible roles to be deployed on VMs. I also supported frontend development by creating a dynamic table of VM performance metrics using Angular and implemented functionality on side panes with additional VM and role information by connecting it to the backend." date="Summer 2020" />
@@ -68,6 +71,22 @@ const SecondPage = ({data}) => (
                     key: 1,
                     title: "Courses",
                     topicList: [
+                        {
+                            name: "Computer Graphics and Imaging",
+                            links: [{
+                                key: 1,
+                                abbrev: "CS 184",
+                                link: "https://cs184.eecs.berkeley.edu/sp22"
+                            }] 
+                        },
+                        {
+                            name: "Introduction to Machine Learning",
+                            links: [{
+                                key: 1,
+                                abbrev: "CS 189",
+                                link: "https://people.eecs.berkeley.edu/~jrs/189/"
+                            }] 
+                        },
                         {
                             name: "Introduction to Computer Vision and Computational Photography",
                             links: [{

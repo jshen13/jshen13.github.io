@@ -39,6 +39,12 @@ import eecs127_fs from "../files/fa21/eecs127_fs.pdf"
 import eecs127_notes from "../files/fa21/eecs127_notes.pdf"
 import psych160_notes from "../files/fa21/psych160_notes.pdf"
 
+import cs184_fs from "../files/sp22/cs184_fs.pdf"
+import cs184_notes from "../files/sp22/cs184_notes.pdf"
+import cs189_fs from "../files/sp22/cs189_fs.pdf"
+import cs189_notes from "../files/sp22/cs189_notes.pdf"
+// import ls160v_notes from "../../static/ls160v_notes.pdf"
+
 import Layout from "../components/layout"
 
 
@@ -55,6 +61,10 @@ export default function Notes({ data }) {
             </React.Fragment>
         )
     }
+
+    function noteLink(semester, name) {
+        return `/notes/${semester}/${name}.pdf`
+    }
     function fall19() {
         return (
             <div className={notesStyles.classesRow}>
@@ -62,10 +72,10 @@ export default function Notes({ data }) {
                 <ClassNotes title="CS 61A" prof="DeNero" notes={
                     [{
                         title: "Class Notes",
-                        file: cs61a_notes
+                        file: noteLink('fa19', 'cs61a_notes')
                     }, {
                         title: "Final Formula Sheet",
-                        file: cs61a_fs
+                        file: noteLink('fa19', 'cs61a_fs')
                     }]
                 } /></div>
 
@@ -73,7 +83,7 @@ export default function Notes({ data }) {
                 <ClassNotes title="EECS 16A" prof="Boser & Ranade" notes={
                     [{
                         title: "Final Formula Sheet",
-                        file: eecs16a_fs
+                        file: noteLink('fa19', 'eecs16a_fs')
                     }]
                 } /></div>
 
@@ -81,10 +91,10 @@ export default function Notes({ data }) {
                 <ClassNotes title="Math 53" prof="Talaska" notes={
                     [{
                         title: "Final Study Guide",
-                        file: math53_sg
+                        file: noteLink('fa19', `math53_sg`)
                     }, {
                         title: "Final Formula Sheet",
-                        file: math53_fs
+                        file: noteLink('fa19', 'math53_fs')
                     }]
                 } /></div>
             </div>
@@ -98,10 +108,10 @@ export default function Notes({ data }) {
                 <ClassNotes title="CS 61B" prof="Hilfinger" notes={
                     [{
                         title: "Class Notes",
-                        file: cs61b_notes 
+                        file: noteLink('sp20', 'cs61b_notes') 
                     }, {
                         title: "Final Formula Sheet",
-                        file: cs61b_fs
+                        file: noteLink('sp20', 'cs61b_fs')
                     }]
                 } /></div>
 
@@ -109,7 +119,7 @@ export default function Notes({ data }) {
                 <ClassNotes title="EECS 16B" prof="Arcat & Sanders" notes={
                     [{
                         title: "Final Formula Sheet",
-                        file: eecs16b_fs 
+                        file: noteLink('sp20', 'eecs16b_fs')
                     }]
                 } /></div>
 
@@ -117,7 +127,7 @@ export default function Notes({ data }) {
                 <ClassNotes title="CS 70" prof="Ayazifar & Sahai" notes={
                     [{
                         title: "Final Formula Sheet",
-                        file: cs70_fs 
+                        file: noteLink('sp20', 'cs70_fs')
                     }]
                 } /></div>
             </div>
@@ -130,10 +140,10 @@ export default function Notes({ data }) {
                 <ClassNotes title="CS 61C" prof="Garcia & Nikolic" notes={
                 [{
                     title: "Class Notes",
-                    file: cs61c_notes 
+                    file: noteLink('fa20', 'cs61c_notes')
                 }, {
                     title: "Final Formula Sheet",
-                    file: cs61c_fs
+                    file: noteLink('fa20', 'cs61c_fs')
                 }]
                 } /></div>
 
@@ -141,7 +151,7 @@ export default function Notes({ data }) {
                 <ClassNotes title="CS 170" prof="Tal & Vazirani" notes={
                 [{
                     title: "Final Study Guide",
-                    file: cs170_sg
+                    file: noteLink('fa20', 'cs170_sg')
                 }]
                 } /></div>
 
@@ -149,14 +159,14 @@ export default function Notes({ data }) {
                 <ClassNotes title="Physics 7B" prof="Birgeneau" notes={
                     [{
                         title: "Final Study Guide",
-                        file: physics7b_sg
+                        file: noteLink('fa20', 'physics7b_sg')
                     }]
                 } /></div>
                 <div className={notesStyles.classes3}>
                 <ClassNotes title="UGBA 135" prof="Odean & Selinger" notes={
                     [{
                         title: "Class Notes",
-                        file: ugba135_notes
+                        file: noteLink('fa20', 'ugba135_notes')
                     }]
                 } /></div>
         
@@ -171,11 +181,11 @@ export default function Notes({ data }) {
                 <ClassNotes title="CS 188" prof="Russell & Song" notes={
                 [{
                     title: "Class Notes",
-                    file: cs188_notes
+                    file: noteLink('sp21', 'cs188_notes')
                 },
                 {
                     title: "Final Study Guide",
-                    file: cs188_sg
+                    file: noteLink('sp21', 'cs188_sg')
                 }]
                 } /></div>
                 
@@ -183,11 +193,11 @@ export default function Notes({ data }) {
                 <ClassNotes title="DATA C100" prof="Bray & Gonzalez" notes={
                 [{
                     title: "Class Notes",
-                    file: data100_notes
+                    file: noteLink('sp21', 'data100_notes')
                 },
                 {
                     title: "Final Study Guide",
-                    file: data100_sg
+                    file: noteLink('sp21', 'data100_sg')
                 }]
                 } /></div>
                 
@@ -195,11 +205,11 @@ export default function Notes({ data }) {
                 <ClassNotes title="CS 162" prof="Crooks & Joseph" notes={
                 [{
                     title: "Class Notes",
-                    file: cs162_notes
+                    file: noteLink('sp21', 'cs162_notes')
                 },
                 {
                     title: "Final Formula Sheet",
-                    file: cs162_fs,
+                    file: noteLink('sp21', 'cs162_fs')
                 }]
                 } /></div>
 
@@ -207,7 +217,7 @@ export default function Notes({ data }) {
                 <ClassNotes title="SOCIOL 121" prof="Ivester" notes={
                 [{
                     title: "Class Notes",
-                    file: sociol121_notes
+                    file: noteLink('sp21', 'sociol121_notes')
                 }]
                 } /></div>
             </div>  
@@ -221,11 +231,11 @@ export default function Notes({ data }) {
                 <ClassNotes title="CS 194-26" prof="Efros & Kanazawa" notes={
                 [{
                     title: "Class Notes",
-                    file: cs194_notes
+                    file: noteLink('fa21', 'cs194-26_notes')
                 },
                 {
                     title: "Midterm Formula Sheet",
-                    file: cs194_fs,
+                    file: noteLink('fa21', 'cs194-26_fs'),
                 },
                 {
                     title: "Projects",
@@ -237,11 +247,11 @@ export default function Notes({ data }) {
                 <ClassNotes title="EECS 127" prof="El Ghaoui" notes={
                 [{
                     title: "Class Notes",
-                    file: eecs127_notes
+                    file:  noteLink('fa21', 'eecs127_notes')
                 },
                 {
                     title: "Final Formula Sheet",
-                    file: eecs127_fs,
+                    file: noteLink('fa21', 'eecs127_fs')
                 }]
                 } /></div>
 
@@ -249,11 +259,11 @@ export default function Notes({ data }) {
                 <ClassNotes title="CS 161" prof="Popa & Weaver" notes={
                 [{
                     title: "Class Notes",
-                    file: cs161_notes
+                    file: noteLink('fa21', 'cs161_notes')
                 },
                 {
                     title: "Final Formula Sheet",
-                    file: cs161_fs,
+                    file: noteLink('fa21', 'cs161_fs')
                 }]
                 } /></div>
 
@@ -261,7 +271,7 @@ export default function Notes({ data }) {
                 <ClassNotes title="Psych 160" prof="Chen" notes={
                 [{
                     title: "Class Notes",
-                    file: psych160_notes
+                    file: noteLink('fa21', 'psych160_notes')
                 }]
                 } /></div>
             </div>  
@@ -273,17 +283,34 @@ export default function Notes({ data }) {
             <div className={notesStyles.classesRow}>
                 <div className={notesStyles.classes3}>
                 <ClassNotes title="CS 189" prof="Shewchuk" notes={
-                []
+                [{
+                    title: "Class Notes",
+                    file: noteLink('sp22', 'cs189_notes')
+                },
+                {
+                    title: "Final Formula Sheet",
+                    file: noteLink('sp22', 'cs189_fs')
+                }]
                 } /></div>
                 
                 <div className={notesStyles.classes3}>
                 <ClassNotes title="CS 184" prof="Ng" notes={
-                []
+                [{
+                    title: "Class Notes",
+                    file: noteLink('sp22', 'cs184_notes')
+                },
+                {
+                    title: "Final Formula Sheet",
+                    file: noteLink('sp22', 'cs184_fs')
+                }]
                 } /></div>
 
                 <div className={notesStyles.classes3}>
                 <ClassNotes title="LS C160V" prof="Keltner" notes={
-                []
+                [{
+                    title: "Class Notes",
+                    file: noteLink('sp22', 'ls160v_notes')
+                }]
                 } /></div>
             </div>  
         )
