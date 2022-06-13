@@ -1,3 +1,5 @@
 site/src/files/sp21/cs162_notes.pdf filter=lfs diff=lfs merge=lfs -text
 site/src/files/sp21/cs188_notes.pdf filter=lfs diff=lfs merge=lfs -text
 site/src/files/sp21/data100_notes.pdf filter=lfs diff=lfs merge=lfs -text
+site/src/files/sp22/*.pdf filter=lfs diff=lfs merge=lfs -text
+
