@@ -6,45 +6,6 @@ import { graphql } from 'gatsby'
 import ClassNotes from "../components/classNotes"
 import notesStyles from "./notes.module.css"
 
-import cs61a_fs from "../files/fa19/cs61a_fs.pdf" 
-import cs61a_notes from "../files/fa19/cs61a_notes.pdf"
-import eecs16a_fs from "../files/fa19/eecs16a_fs.pdf"
-import math53_fs from "../files/fa19/math53_fs.pdf"
-import math53_sg from "../files/fa19/math53_sg.pdf"
-
-import cs61b_fs from "../files/sp20/cs61b_fs.pdf" 
-import cs61b_notes from "../files/sp20/cs61b_notes.pdf" 
-import cs70_fs from "../files/sp20/cs70_fs.pdf" 
-import eecs16b_fs from "../files/sp20/eecs16b_fs.pdf"
-
-import cs170_sg from "../files/fa20/cs170_sg.pdf"
-import cs61c_fs from "../files/fa20/cs61c_fs.pdf"
-import cs61c_notes from "../files/fa20/cs61c_notes.pdf"
-import physics7b_sg from "../files/fa20/physics7b_sg.pdf"
-import ugba135_notes from "../files/fa20/ugba135_notes.pdf" 
-
-import cs188_sg from "../files/sp21/cs188_sg.pdf"
-import data100_sg from "../files/sp21/data100_sg.pdf"
-import cs162_fs from "../files/sp21/cs162_fs.pdf"
-import cs162_notes from "../files/sp21/cs162_notes.pdf"
-import cs188_notes from "../files/sp21/cs188_notes.pdf"
-import data100_notes from "../files/sp21/data100_notes.pdf"
-import sociol121_notes from "../files/sp21/sociol121_notes.pdf"
-
-import cs161_fs from "../files/fa21/cs161_fs.pdf"
-import cs161_notes from "../files/fa21/cs161_notes.pdf"
-import cs194_fs from "../files/fa21/cs194-26_fs.pdf"
-import cs194_notes from "../files/fa21/cs194-26_notes.pdf"
-import eecs127_fs from "../files/fa21/eecs127_fs.pdf"
-import eecs127_notes from "../files/fa21/eecs127_notes.pdf"
-import psych160_notes from "../files/fa21/psych160_notes.pdf"
-
-import cs184_fs from "../files/sp22/cs184_fs.pdf"
-import cs184_notes from "../files/sp22/cs184_notes.pdf"
-import cs189_fs from "../files/sp22/cs189_fs.pdf"
-import cs189_notes from "../files/sp22/cs189_notes.pdf"
-// import ls160v_notes from "../../static/ls160v_notes.pdf"
-
 import Layout from "../components/layout"
 
 
@@ -316,6 +277,26 @@ export default function Notes({ data }) {
         )
     }
 
+    function fall22() {
+        return (
+            <div className={notesStyles.classesRow}>
+                <div className={notesStyles.classes3}>
+                <ClassNotes title="CS 186" prof="Cheung" notes={
+                []
+                } /></div>
+                
+                <div className={notesStyles.classes3}>
+                <ClassNotes title="CS 182" prof="Sahai" notes={
+                []
+                } /></div>
+
+                <div className={notesStyles.classes3}>
+                <ClassNotes title="UGBA 107" prof="Ross" notes={
+                []
+                } /></div>
+            </div>  
+        )
+    }
 
     return (
         <div>
@@ -324,6 +305,8 @@ export default function Notes({ data }) {
             <div className={notesStyles.description}>
                 <p>These are a compilation of my notes, study guides, and exam formula sheets from classes. </p>  
             </div>
+            {semesterHeading("Fall 2022")}
+            {fall22()}
             {semesterHeading("Spring 2022")}
             {spring22()}
             {semesterHeading("Fall 2021")}
@@ -338,11 +321,6 @@ export default function Notes({ data }) {
             {fall19()}
 
         </Layout>
-            
-
-          
-
-          
         </div>
     )
 
