@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[14],{Qak4:function(e,a,n){e.exports=n.p+"static/redondo_drone1080-eb7e4d4db4dba17ff3045a60063b3304.mp4"},nRuM:function(e,a,n){"use strict";n.r(a);var o=n("q1tI"),t=n.n(o);n("Wbzz"),n("Qak4");a.default=function(e){e.data;return t.a.createElement("div",{className:"home"},"Some Blog page")}}}]);
+//# sourceMappingURL=component---src-pages-simplelife-blog-jsx-caa46ab892c15c8cf024.js.map
