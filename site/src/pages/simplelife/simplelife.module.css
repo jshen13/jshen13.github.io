@@ -1,0 +1,64 @@
+.products_btn {
+    position: absolute;
+     top: 28% ;
+        left: 16.5%;
+    width: 170px;
+    height: 50px;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    border: 0px;
+    font-size: 20px;
+    font: Hero;
+    
+    /* color: blueviolet; */
+    /* transform: translate(-50%, -50%); */
+
+    /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center; */
+}
+
+
+.our_story_btn {
+    position: absolute;
+     top: 28% ;
+        left: 43.5%;
+    width: 170px;
+    height: 50px;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    border: 0px;
+    font-size: 20px;
+    font: Hero;
+}
+
+.blog_btn {
+    position: absolute;
+     top: 28% ;
+        left: 70.5%;
+    width: 170px;
+    height: 50px;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    border: 0px;
+    font-size: 20px;
+    font: Hero;
+}
+
+.home img{
+    position: relative;
+
+}
