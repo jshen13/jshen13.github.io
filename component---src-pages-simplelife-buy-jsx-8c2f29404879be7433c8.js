@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[15],{"3lfu":function(e,a,n){"use strict";n.r(a);var t=n("q1tI"),o=n.n(t);n("Wbzz"),n("Qak4");a.default=function(e){e.data;return o.a.createElement("div",{className:"home"},"Some Buy page")}},Qak4:function(e,a,n){e.exports=n.p+"static/redondo_drone1080-eb7e4d4db4dba17ff3045a60063b3304.mp4"}}]);
+//# sourceMappingURL=component---src-pages-simplelife-buy-jsx-8c2f29404879be7433c8.js.map
