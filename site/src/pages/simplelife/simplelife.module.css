@@ -58,6 +58,20 @@
     font: Hero;
 }
 
+.buy_btn {
+    position: absolute;
+     top: 88% ;
+        left: 78.5%;
+    width: 170px;
+    height: 50px;
+    background-color: transparent;
+    color: black;
+    border-radius: 20px;
+    border: 0px;
+    font-size: 20px;
+    font: Hero;
+}
+
 .home img{
     position: relative;
 
