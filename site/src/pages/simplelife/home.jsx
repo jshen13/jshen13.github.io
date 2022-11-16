@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { graphql } from 'gatsby'
 
 // import Layout from "../../components/layout"
-// import SEO from "../../components/seo"
+import SEO from "../../components/seo"
 // import Header from "../../components/header"
 // import Intro from "../../components/intro"
 
@@ -27,6 +27,8 @@ import SimpleLifeBathroomBundle from "../../images/SimpleLife/bathroom_bundle.pn
 
 const IndexPage = ({ data }) => (
     <div className="home">
+            <SEO title="Simple Life Home" description="Fresh Disinfecting Bathroom Toilet Bowl Cleaning Stamp Gel | Amazon, Clorox" />
+
 
     <img src={SimpleLifeHome} alt="Simple Life Home" width="100%" />
     <img src={SimpleLifeWorks} alt="Simple Life Home" width="100%" />
@@ -36,13 +38,13 @@ const IndexPage = ({ data }) => (
 
 
         <Link to="/simplelife/products"><button className={simpleLifeStyles.products_btn}>
-    Products            </button></Link>
+               </button></Link>
 
     <Link to="/simplelife/story"><button className={simpleLifeStyles.our_story_btn}>
-            Our Story            </button></Link>
+                       </button></Link>
         
         <Link to="/simplelife/blog"><button className={simpleLifeStyles.blog_btn}>
-            Blog            </button></Link>
+                      </button></Link>
 
             <Link to="/simplelife/buy"><button className={simpleLifeStyles.buy_btn}>
                       </button></Link>

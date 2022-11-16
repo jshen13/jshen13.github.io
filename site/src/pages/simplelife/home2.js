@@ -8,6 +8,8 @@ import headerStyles from "../../components/header.module.css"
 
 import homeStyles from "./../index.module.css"
 import SimpleLifeScents from "../../images/SimpleLife/scents.png"
+import SimpleLifeLogo from "../../images/SimpleLife/logo.png"
+
 import SimpleLifeBathroomBundle from "../../images/SimpleLife/bathroom_bundle.png"
 import DroneVideo from "../../images/SimpleLife/Demo.mp4"
 
@@ -20,19 +22,26 @@ const IndexPage = ({ data }) => (
     <header className={headerStyles.siteHeader}>
 <nav className={headerStyles.navBar} id="myTopnav" >
 <ul>
-<li  ><Link  to="/simplelife/products">Products</Link>
-  {/* <a href="art.html">Art Portfolio</a> */}
-</li>
+<li><Link  to="/simplelife/blog">Blog</Link>
+  {/* <a href="notes.html">Notes</a> */}
+          </li>
 <li><Link  to="/simplelife/story">Our Story</Link>
   {/* <a href="art.html">Art Portfolio</a> */}
 </li>
-<li><Link  to="/simplelife/blog">Blog</Link>
-  {/* <a href="notes.html">Notes</a> */}
+
+          <li  ><Link  to="/simplelife/products">Products</Link>
+  {/* <a href="art.html">Art Portfolio</a> */}
 </li>
 <li><Link  to="/simplelife/home2">Home</Link>
   {/* <a className="active" href="index.html">Home</a> */}
         </li>
-        
+        <h1 style={{ margin: 0, padding: 0 }}>
+          <Link to="/" style={{ color: `white`, textDecoration: `none` }}>
+          <img src={SimpleLifeLogo} width="30px" height="30px" padding="0px" /> Simple Life </Link>
+            
+          </h1>
+          
+  
   
 
         
@@ -43,7 +52,7 @@ const IndexPage = ({ data }) => (
 
 </header>
 
-    <SEO title="Home" />
+<SEO title="Simple Life Home" description="Fresh Disinfecting Bathroom Toilet Bowl Cleaning Stamp Gel | Amazon, Clorox" />
 
     <div className={homeStyles.mainVideo}>
       <video autoPlay loop muted>

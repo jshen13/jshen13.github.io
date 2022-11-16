@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { graphql } from 'gatsby'
 
+import SEO from "../../components/seo"
 
 // import simpleLifeStyles from "./simplelife.module.css"
 // import DroneVideoAlt from "../videos/video_alt.png"
@@ -24,7 +25,8 @@ import DroneVideo from "../../videos/redondo_drone1080.mp4"
 
 const IndexPage = ({ data }) => (
     <div className="home">
-        Some Story page
+        <SEO title="Simple Life Our Story" description="Fresh Disinfecting Bathroom Toilet Bowl Cleaning Stamp Gel | Amazon, Clorox" />
+        <h1>Story page</h1>
     {/* <img src={SimpleLifeHome} alt="Simple Life Home" width="100%" />
     <img src={SimpleLifeWorks} alt="Simple Life Home" width="100%" />
     <img src={SimpleLifeScents} alt="Simple Life Home" width="100%" />
