@@ -1,0 +1,8 @@
+dd {
+    display: list-item;
+    list-style-type: "💻";
+    line-height: 1.2em;
+    padding-inline-start: 1ch;
+}
+
+

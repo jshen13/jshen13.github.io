@@ -12,10 +12,3 @@
     padding-bottom: 100px;
 }
 
-dd {
-    display: list-item;
-  list-style-type: "💻";
-    line-height: 0.1em;
-  padding-inline-start: 1ch;
-
-}

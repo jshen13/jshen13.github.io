@@ -75,8 +75,8 @@ const SecondPage = ({data}) => (
                             name: "Deep Neural Networks",
                             links: [{
                                 key: 1,
-                                abbrev: "CS 186",
-                                link: "https://cs186berkeley.net/"
+                                abbrev: "CS 182",
+                                link: "https://inst.eecs.berkeley.edu/~cs182/fa22/"
                             }] 
                         },
                         {

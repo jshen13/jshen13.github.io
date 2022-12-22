@@ -2,6 +2,7 @@ import React from 'react'
 import positionStyles from "./position.module.css"
 import { useStaticQuery, graphql } from 'gatsby'
 import PersonalPic from '../images/personal.jpg'
+import schoolStyles from "./school.module.css"
 
 export default function School({ data, title, subtitle, date, image, imgAlt, desc, link, courses, activities }) {
   
@@ -30,18 +31,14 @@ export default function School({ data, title, subtitle, date, image, imgAlt, des
   function coursesJSX(obj) {
     let rtn = []
     rtn.push(<React.Fragment>
-      <b> {obj.title}</b>: <br/><br/></React.Fragment>)
+      <b> {obj.title}</b>: <br/></React.Fragment>)
     
     for (let i = 0; i < obj.topicList.length; i++) {
       let topic_obj = obj.topicList[i]
       rtn.push(<React.Fragment><dd>{topic_obj.name} ({topic_obj.links.map(link_obj => {
           return (<React.Fragment><a href={link_obj.link} target="_blank">{link_obj.abbrev}</a></React.Fragment>)
       }).reduce((prev, curr) => [prev, ', ', curr])})
-          </dd><br/></React.Fragment> )
-      if (i != obj.topicList.length - 1) {
-        rtn.push(<React.Fragment></React.Fragment>)
-
-      }
+      </dd></React.Fragment> )
     } 
     return rtn
   }
@@ -76,7 +73,10 @@ export default function School({ data, title, subtitle, date, image, imgAlt, des
         </div>
         {subtitle && <h4>{subtitle}</h4>}
         
+        <div className={schoolStyles.courses}>
         {courses && courses.map(coursesJSX)}
+
+        </div>
         <br></br>
         {activities && activities.map(activitiesJSX)}
 
