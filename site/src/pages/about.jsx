@@ -72,6 +72,22 @@ const SecondPage = ({data}) => (
                     title: "Courses",
                     topicList: [
                         {
+                            name: "Deep Neural Networks",
+                            links: [{
+                                key: 1,
+                                abbrev: "CS 186",
+                                link: "https://cs186berkeley.net/"
+                            }] 
+                        },
+                        {
+                            name: "Introduction to Database Systems",
+                            links: [{
+                                key: 1,
+                                abbrev: "CS 186",
+                                link: "https://cs186berkeley.net/"
+                            }] 
+                        },
+                        {
                             name: "Computer Graphics and Imaging",
                             links: [{
                                 key: 1,
@@ -207,9 +223,15 @@ const SecondPage = ({data}) => (
                             name: "Computer Science Mentors",
                             link: "https://csmentors.berkeley.edu/#/"
                         }, {
-                            name: "CS 194-26 Reader",
+                            name: "CS 184 TA (Spring 2023)",
+                            link: "https://cs184.eecs.berkeley.edu/sp23"
+                        },{
+                            name: "CS 194-26 Reader (Fall 2022)",
                             link: "https://inst.eecs.berkeley.edu/~cs194-26/fa22/"
                         },{
+                            name: "ROAR - XR@Berkeley",
+                            link: "https://roar.berkeley.edu/berkeley-major-map/"
+                        }, {
                             name: "UAVs@Berkeley",
                             link: "https://uav.berkeley.edu/"
                         }, {

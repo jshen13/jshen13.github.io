@@ -263,6 +263,10 @@ export default function Notes({ data }) {
                 {
                     title: "Final Formula Sheet",
                     file: noteLink('sp22', 'cs184_fs')
+                },
+                {
+                    title: "Projects",
+                    file: "https://cal-cs184-student.github.io/sp22-project-webpages-lulu-yu/"
                 }]
                 } /></div>
 
@@ -282,18 +286,77 @@ export default function Notes({ data }) {
             <div className={notesStyles.classesRow}>
                 <div className={notesStyles.classes3}>
                 <ClassNotes title="CS 186" prof="Cheung" notes={
-                []
+                [{
+                    title: "Class Notes",
+                    file: noteLink('fa22', 'cs186_notes')
+                },
+                {
+                    title: "Final Formula Sheet",
+                    file: noteLink('fa22', 'cs186_fs')
+                },]
                 } /></div>
                 
                 <div className={notesStyles.classes3}>
                 <ClassNotes title="CS 182" prof="Sahai" notes={
-                []
+                [{
+                    title: "Final Formula Sheet",
+                    file: noteLink('fa22', 'cs182_fs')
+                }]
+                } /></div>
+
+                <div className={notesStyles.classes3}>
+                <ClassNotes title="UGBA 176" prof="Dwyer" notes={
+                [{
+                    title: "Class Notes",
+                    file: noteLink('fa22', 'ugba176_notes')
+                },]
                 } /></div>
 
                 <div className={notesStyles.classes3}>
                 <ClassNotes title="UGBA 107" prof="Ross" notes={
+                [{
+                    title: "Class Notes",
+                    file: noteLink('fa22', 'ugba107_notes')
+                },]
+                } /></div>
+
+                
+            </div>  
+        )
+    }
+
+    function spring23() {
+        return (
+            <div className={notesStyles.classesRow}>
+                <div className={notesStyles.classes3}>
+                <ClassNotes title="CS 152" prof="Shao" notes={
                 []
                 } /></div>
+                
+                <div className={notesStyles.classes3}>
+                <ClassNotes title="CS 164" prof="Sen" notes={
+                []
+                } /></div>
+
+                <div className={notesStyles.classes3}>
+                <ClassNotes title="LS C180U" prof="Reich" notes={
+                []
+                } /></div> 
+            </div>  
+        )
+    }
+
+    function teaching() {
+        return (
+            <div className={notesStyles.classesRow}>
+                <div className={notesStyles.classes3}>
+                <ClassNotes title="CS 61B" prof="CSM" notes={
+                [{
+                    title: "Teaching Slides",
+                    file: "https://drive.google.com/drive/folders/14nJxmINV6WT9GSqZCUFPpeM7Myq3yhqp?usp=sharing"
+                },]
+                } /></div>
+                
             </div>  
         )
     }
@@ -305,6 +368,8 @@ export default function Notes({ data }) {
             <div className={notesStyles.description}>
                 <p>These are a compilation of my notes, study guides, and exam formula sheets from classes. </p>  
             </div>
+            {semesterHeading("Spring 2023")}
+            {spring23()}
             {semesterHeading("Fall 2022")}
             {fall22()}
             {semesterHeading("Spring 2022")}
@@ -319,6 +384,8 @@ export default function Notes({ data }) {
             {spring20()}
             {semesterHeading("Fall 2019")}
             {fall19()}
+            {semesterHeading("Teaching")}
+            {teaching()}
 
         </Layout>
         </div>
