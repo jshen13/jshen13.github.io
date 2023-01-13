@@ -63,7 +63,7 @@ export default function School({ data, title, subtitle, date, image, imgAlt, des
       <div className={positionStyles.intro}>
         <div className={positionStyles.introHeading}>
           <div className={positionStyles.title}>
-            <a href={link} target="_blank"><h2>{title}</h2></a>
+            <a href={link} target="_blank" rel="noopener"><h2>{title}</h2></a>
           </div>
               
           <div className={positionStyles.date}>

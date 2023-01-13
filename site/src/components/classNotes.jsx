@@ -8,7 +8,7 @@ export default function ClassNotes({ data, title, prof, notes }) {
     function notesLinks(note) {
         return (
             <React.Fragment>
-                <a href={note.file} target="__blank">{note.title}</a>
+                <a href={note.file} target="_blank">{note.title}</a>
                 <a href={note.file} download>  <FiDownload /></a>
                 <br />
                 

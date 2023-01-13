@@ -42,7 +42,7 @@ export default function Position({ data, title, date, image, imgAlt, desc, link 
       <div className={positionStyles.intro}>
         <div className={positionStyles.introHeading}>
           <div className={positionStyles.title}>
-            <a href={link} target="_blank"><h2>{title}</h2></a>
+            <a href={link} target="_blank" ><h2>{title}</h2></a>
           </div>
               
           <div className={positionStyles.date}>
