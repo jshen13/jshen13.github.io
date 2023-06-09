@@ -6,7 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
-    "gatsby": "^2.32.13",
+    "gatsby": "^4.25.7",
     "gatsby-image": "^2.11.0",
     "gatsby-plugin-google-gtag": "^2.8.0",
     "gatsby-plugin-manifest": "^2.12.1",
