@@ -1,9 +1,5 @@
-import React, { Component } from 'react';
-import { graphql } from 'gatsby'
-import Img from "gatsby-image"
-import artStyles from "./art.module.css"
-import { FiDownload } from 'react-icons/fi';
-import Layout from "../components/layout"
+import React from 'react';
+import * as artStyles from "./art.module.css"
 import SEO from "../components/seo"
 import Header from "../components/header"
 

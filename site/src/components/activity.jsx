@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
-import { graphql } from 'gatsby'
-import activityStyles from "./activity.module.css"
+import React from 'react';
+import * as activityStyles from "./activity.module.css"
 import { Link } from "gatsby"
 
 

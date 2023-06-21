@@ -3,10 +3,9 @@ import { Link } from "gatsby"
 import { graphql } from 'gatsby'
 
 import SEO from "../../components/seo"
-import Header from "../../components/header"
-import headerStyles from "../../components/header.module.css"
+import * as headerStyles from "../../components/header.module.css"
 
-import homeStyles from "./../index.module.css"
+import * as homeStyles from "./../index.module.css"
 import SimpleLifeScents from "../../images/SimpleLife/scents.png"
 import SimpleLifeLogo from "../../images/SimpleLife/logo.png"
 

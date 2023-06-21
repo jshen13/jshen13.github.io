@@ -1,10 +1,9 @@
 import React from "react"
-import Header from "../components/header"
 import SEO from "../components/seo"
 import { graphql } from 'gatsby'
 
 import ClassNotes from "../components/classNotes"
-import notesStyles from "./notes.module.css"
+import * as notesStyles from "./notes.module.css"
 
 import Layout from "../components/layout"
 

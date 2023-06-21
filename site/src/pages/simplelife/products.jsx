@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import { graphql } from 'gatsby'
 
 import SEO from "../../components/seo"
@@ -20,7 +19,6 @@ import SEO from "../../components/seo"
 
 // import SimpleLifeVideo from "../images/SimpleLife/Simple_Life.mov"
 // 
-import DroneVideo from "../../videos/redondo_drone1080.mp4"
 
 
 const IndexPage = ({ data }) => (

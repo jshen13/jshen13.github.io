@@ -1,8 +1,7 @@
 import { Link } from "gatsby"
+import * as headerStyles from "./header.module.css"
 import React from "react"
-import headerStyles from "./header.module.css"
 import logo from "../images/logos/logo2.png"
-import Img from "gatsby-image"
 
 export default function Header({ data, siteTitle }) {
   function isActiveTab(name) {
@@ -42,12 +41,12 @@ export default function Header({ data, siteTitle }) {
   //   </div>
   // </header>
 
-
+  console.log(headerStyles);
   
-return (
+  return (
 <header className={headerStyles.siteHeader}>
 <meta property="og:image" content="https://jshen13.github.io/logo.png" />
-<nav className={headerStyles.navBar} id="myTopnav" >
+<nav className={ headerStyles.navBar} id="myTopnav" >
 <ul>
 <li  ><Link className={isActiveTab("About")} to="/about/">About</Link>
   {/* <a href="art.html">Art Portfolio</a> */}
@@ -64,7 +63,7 @@ return (
         
 <h1 style={{ margin: 0, padding: 0 }}>
           <Link to="/" style={{ color: `white`, textDecoration: `none` }}>
-            <img src={logo} width="25px" height="25px"/> {siteTitle} </Link>
+            <img src={logo} width="25px" height="25px" alt="logo"/> {siteTitle} </Link>
       </h1>
   
 

@@ -40,14 +40,25 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
+    // {
+    //   resolve: `gatsby-plugin-google-gtag`,
+    //   options: {
+    //     // You can add multiple tracking ids and a pageview event will be fired for all of them.
+    //     trackingIds: [
+    //       "UA-151003054-2", 
+    //       "G-TJKYT54R24"
+    //     ],
+    //   },
+    // },
     {
-      resolve: `gatsby-plugin-google-gtag`,
+      resolve: `gatsby-plugin-gtag`,
       options: {
-        // You can add multiple tracking ids and a pageview event will be fired for all of them.
-        trackingIds: [
-          "UA-151003054-2", 
-          "G-TJKYT54R24"
-        ],
+        // your google analytics tracking id
+        trackingIds: ["UA-151003054-2", "G-TJKYT54R24"],
+        // Puts tracking script in the head instead of the body
+        head: false,
+        // enable ip anonymization
+        anonymize: true,
       },
     },
     `gatsby-plugin-preload-fonts`

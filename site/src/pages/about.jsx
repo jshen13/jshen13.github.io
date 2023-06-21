@@ -8,7 +8,7 @@ import SEO from "../components/seo"
 import School from "../components/school"
 import Intro from "../components/intro"
 
-import aboutStyles from "./about.module.css"
+import * as aboutStyles from "./about.module.css"
 import personalPic from "../images/personal2.jpg"
 import googleLogo from "../images/logos/google.png"
 import qcLogo from "../images/logos/qualcomm.png"
@@ -20,12 +20,9 @@ import southLogo from "../images/logos/southLogo.gif"
 import Activity from "../components/activity"
 
 import SFRoad from "../images/art/sf_road.jpg"
-import Tank from "../images/art/tank.jpg"
 import DronePic from "../images/drone_wave.jpg"
 import GolfPhoto from "../images/golf_trophy.jpg"
 import { FaLinkedin, FaGithub } from "react-icons/fa"
-import { transform } from "typescript"
-import resume from "../files/resume.pdf"
 
 const SecondPage = ({data}) => (
   <Layout siteTitle="About">

@@ -7,7 +7,7 @@ import SEO from "../../components/seo"
 // import Header from "../../components/header"
 // import Intro from "../../components/intro"
 
-import simpleLifeStyles from "./simplelife.module.css"
+import * as simpleLifeStyles from "./simplelife.module.css"
 // import { FiChevronRight } from "react-icons/fi"
 // import PersonalPic from "../images/personal2.jpg"
 // import { FaLinkedin, FaGithub } from "react-icons/fa"

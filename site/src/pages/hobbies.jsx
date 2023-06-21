@@ -1,8 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
 import { graphql } from 'gatsby'
 
-import Position from "../components/position"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Activity from "../components/activity"
@@ -17,7 +15,7 @@ const Hobbies = ({ data }) => (
     <Layout siteTitle="Hobbies">
         <SEO title="Hobbies" />
         <p style={{ "paddingTop": 10 }}></p>
-        <Activity title="Art" buttonName="View Art Gallery" buttonLink="/art" description={ <p>I attended <a href="http://www.us-fineart.com/" target="_blank" rel="noopener">US Arts Education</a> from 2010 to 2019 assembling an art portfolio. I typically draw with pastel and sketches. </p>}images={[
+        <Activity title="Art" buttonName="View Art Gallery" buttonLink="/art" description={ <p>I attended <a href="http://www.us-fineart.com/" target="_blank" rel="noopener noreferrer">US Arts Education</a> from 2010 to 2019 assembling an art portfolio. I typically draw with pastel and sketches. </p>}images={[
             SFRoad,
             BoatPier,
             Tank

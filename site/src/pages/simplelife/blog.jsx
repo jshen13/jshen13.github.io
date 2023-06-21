@@ -1,27 +1,7 @@
 import React from "react"
-import { Link } from "gatsby"
 import { graphql } from 'gatsby'
 
 import SEO from "../../components/seo"
-
-// import simpleLifeStyles from "./simplelife.module.css"
-// import DroneVideoAlt from "../videos/video_alt.png"
-// import { FiChevronRight } from "react-icons/fi"
-// import PersonalPic from "../images/personal2.jpg"
-// import { FaLinkedin, FaGithub } from "react-icons/fa"
-// import BoatPier from "../images/art/boat_pier.jpg"
-// import DronePic from "../images/drone_wave.jpg"
-// import DronePVPic from "../images/drone_pv.jpg"
-
-// import SimpleLifeHome from "../images/SimpleLife/home.png"
-// import SimpleLifeWorks from "../images/SimpleLife/how_it_works.png"
-// import SimpleLifeScents from "../images/SimpleLife/scents.png"
-// import SimpleLifeBathroomBundle from "../images/SimpleLife/bathroom_bundle.png"
-
-// import SimpleLifeVideo from "../images/SimpleLife/Simple_Life.mov"
-// 
-import DroneVideo from "../../videos/redondo_drone1080.mp4"
-
 
 const IndexPage = ({ data }) => (
     <div className="home">

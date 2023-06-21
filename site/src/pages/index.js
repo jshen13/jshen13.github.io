@@ -2,12 +2,11 @@ import React from "react"
 import { Link } from "gatsby"
 import { graphql } from 'gatsby'
 
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Header from "../components/header"
 import Intro from "../components/intro"
 
-import homeStyles from "./index.module.css"
+import * as homeStyles from "./index.module.css"
 import DroneVideo from "../videos/redondo_drone1080.mp4"
 import DroneVideoAlt from "../videos/video_alt.png"
 import { FiChevronRight } from "react-icons/fi"

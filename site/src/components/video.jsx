@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import videoStyles from "./video.module.css"
+import React from 'react'
+import * as videoStyles from "./video.module.css"
 // import DroneVideo from "../videos/redondo_drone.mp4"
 
 const Video = () => { 
