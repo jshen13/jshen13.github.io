@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[898],{5741:function(e,t,a){a.r(t);var l=a(7294),r=a(8183);t.default=e=>{let{data:t}=e;return l.createElement("div",{className:"home"},l.createElement(r.Z,{title:"Simple Life Our Story",description:"Fresh Disinfecting Bathroom Toilet Bowl Cleaning Stamp Gel | Amazon, Clorox"}),l.createElement("h1",null,"Story page"))}}}]);
+//# sourceMappingURL=component---src-pages-simplelife-story-jsx-1d7d2f5380a11e7ede62.js.map
