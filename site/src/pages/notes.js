@@ -330,17 +330,22 @@ export default function Notes({ data }) {
             <div className={notesStyles.classesRow}>
                 <div className={notesStyles.classes3}>
                 <ClassNotes title="CS 152" prof="Shao" notes={
-                []
-                } /></div>
-                
-                <div className={notesStyles.classes3}>
-                <ClassNotes title="CS 164" prof="Sen" notes={
-                []
+                [{
+                    title: "Class Notes",
+                    file: noteLink('sp23', 'cs152_notes')
+                        },
+                        {
+                            title: "Final Formula Sheet",
+                            file: noteLink('sp23', 'cs152_fs')
+                        },]
                 } /></div>
 
                 <div className={notesStyles.classes3}>
                 <ClassNotes title="LS C180U" prof="Reich" notes={
-                []
+                [{
+                    title: "Class Notes",
+                    file: noteLink('sp23', 'ls180_notes')
+                        },]
                 } /></div> 
             </div>  
         )
@@ -356,6 +361,14 @@ export default function Notes({ data }) {
                     file: "https://drive.google.com/drive/folders/14nJxmINV6WT9GSqZCUFPpeM7Myq3yhqp?usp=sharing"
                 },]
                 } /></div>
+
+<div className={notesStyles.classes3}>
+                <ClassNotes title="CS 184" prof="TA" notes={
+                [{
+                    title: "Discussion Slides",
+                    file: "https://drive.google.com/drive/folders/1AEvjsMn-9fXHmaMxeyzQq2wiPhQ-ZO0j?usp=sharing"
+                },]
+                } /></div>
                 
             </div>  
         )
@@ -366,7 +379,7 @@ export default function Notes({ data }) {
         <Layout siteTitle="Notes">
             <SEO title="Notes" />
             <div className={notesStyles.description}>
-                <p>These are a compilation of my notes, study guides, and exam formula sheets from classes. </p>  
+                <p>These are a compilation of my notes, study guides, and exam formula sheets from classes at UC Berkeley. </p>  
             </div>
             {semesterHeading("Spring 2023")}
             {spring23()}
