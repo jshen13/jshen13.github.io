@@ -85,6 +85,14 @@ const SecondPage = ({data}) => (
                             }] 
                         },
                         {
+                            name: "Computer Architecture and Engineering",
+                            links: [{
+                                key: 1,
+                                abbrev: "CS 152",
+                                link: "https://inst.eecs.berkeley.edu/~cs152/sp23/"
+                            }] 
+                        },
+                        {
                             name: "Computer Graphics and Imaging",
                             links: [{
                                 key: 1,

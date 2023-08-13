@@ -52,7 +52,7 @@ const IndexPage = ({ data }) => (
     </div>
     
     <div className={homeStyles.rest}>
-      <Intro image={PersonalPic} title="Hello!" desc={data.site.siteMetadata.info + " I've completed a couple software engineering internships at various companies. I also enjoy golfing, flying drones, and drawing."}  buttons={[
+      <Intro image={PersonalPic} title="Hello!" desc={data.site.siteMetadata.info + " I also enjoy golfing, flying drones, and drawing."}  buttons={[
                     {
                         name: <React.Fragment>LinkedIn <FaLinkedin style={{ transform: "translateY(+14%)" }}/></React.Fragment>,
                         link: "https://linkedin.com/in/jshen13"
