@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Jeffrey Shen`,
     description: `About Jeffrey Shen's experience and activites.`,
-    info: `I'm currently a software engineer based in San Francisco. I studied Electrical Engineering and Computer Science @ UC Berkeley and graduated in 2023. I love keeping up with technology & software and have interests in computer vision and graphics, backend development, and data science.`,
+    info: `I'm currently a software engineer based in San Francisco. I studied Electrical Engineering and Computer Science at UC Berkeley and graduated in 2023. I love keeping up with technology & software and have interests in computer vision and graphics, backend development, and data science.`,
     author: `@jshen_13`,
     image: `/logo.png`
   },

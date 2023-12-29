@@ -307,7 +307,7 @@ export default function Notes({ data }) {
       <div className={notesStyles.classesRow}>
         <div className={notesStyles.classes3}>
           <ClassNotes
-            title="CS 194-26"
+            title="CS 180 (Prev 194-26)"
             prof="Efros & Kanazawa"
             notes={[
               {
@@ -614,7 +614,10 @@ export default function Notes({ data }) {
         <div className={notesStyles.description}>
           <p>
             These are a compilation of my notes, study guides, and exam formula
-            sheets from classes at UC Berkeley.{" "}
+            sheets from classes at UC Berkeley. I tracked time spent in classes using  
+            <a href="https://toggl.com/track/">Toggl Track</a> to find the amount of time 
+            spent on homework, projects, and studying. Feel free to use them as a reference 
+            but note they may be approximations. Good luck on exams! {" "}
           </p>
         </div>
         {semesterHeading("Spring 2023")}
