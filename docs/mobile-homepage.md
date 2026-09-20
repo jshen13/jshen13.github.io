@@ -11,10 +11,10 @@ Both variants have lightweight WebP poster images from the original footage.
   client selects one video based on viewport width, avoiding a desktop download
   on initial mobile visits.
 - Reduced-motion and supported data-saver preferences keep the poster visible
-  until Play is selected. Autoplay refusal also leaves a working Play control;
-  video errors retain the poster. Autoplay cannot be guaranteed on every device.
+  throughout the visit. Autoplay refusal and video errors retain the poster
+  without a visible video control. Autoplay cannot be guaranteed on every device.
 - Playback is muted and inline. It pauses outside the viewport or in a hidden
-  tab, and a manual pause remains paused when scrolling back.
+  tab. The hero has no visible play/pause button.
 - Mobile hero height uses the stable viewport unit, bounded width, and cover
   cropping. Text and the About link are visible immediately on mobile.
 - The mobile navigation has a 44px hamburger control with expanded-state and
@@ -30,7 +30,7 @@ Both variants have lightweight WebP poster images from the original footage.
 - Browser checks for menu opening, Escape, outside click, link navigation,
   the unchanged desktop video source, and mobile video/poster selection.
 - Isolated DOM tests of the actual video component cover server rendering,
-  source selection, muted inline playback, offscreen pause/resume, manual pause,
-  reduced motion, data saver, explicit opt-in, autoplay refusal, and media errors.
+  source selection, muted inline playback, offscreen pause/resume,
+  reduced motion, data saver, autoplay refusal, and media errors.
 - Physical iPhone Safari and Android Chrome hardware were not available;
   viewport simulation and DOM tests do not reproduce every device media policy.

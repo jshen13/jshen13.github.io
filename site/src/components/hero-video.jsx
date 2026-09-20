@@ -7,11 +7,8 @@ import * as styles from "./hero-video.module.css"
 
 export default function HeroVideo() {
   const videoRef = useRef(null)
-  const wantsPlayback = useRef(true)
   const [source, setSource] = useState(null)
   const [autoPlayAllowed, setAutoPlayAllowed] = useState(false)
-  const [requested, setRequested] = useState(false)
-  const [playing, setPlaying] = useState(false)
   const [hasPlayed, setHasPlayed] = useState(false)
   const [failed, setFailed] = useState(false)
 
@@ -22,7 +19,6 @@ export default function HeroVideo() {
     const update = () => {
       setSource(mobile.matches ? mobileVideo : desktopVideo)
       setAutoPlayAllowed(!reducedMotion.matches && !connection?.saveData)
-      setRequested(false)
       setHasPlayed(false)
       setFailed(false)
     }
@@ -37,11 +33,10 @@ export default function HeroVideo() {
     }
   }, [])
 
-  const activeSource = autoPlayAllowed || requested ? source : undefined
+  const activeSource = autoPlayAllowed ? source : undefined
 
   useEffect(() => {
     setHasPlayed(false)
-    setPlaying(false)
     setFailed(false)
     const video = videoRef.current
     video.defaultMuted = true
@@ -51,8 +46,8 @@ export default function HeroVideo() {
 
     let inView = true
     const updatePlayback = () => {
-      if (inView && !document.hidden && wantsPlayback.current) {
-        // An autoplay refusal leaves the poster and explicit play control available.
+      if (inView && !document.hidden) {
+        // If autoplay is refused, keep the poster visible without an overlay control.
         video.play()?.catch(() => {})
       } else {
         video.pause()
@@ -70,16 +65,6 @@ export default function HeroVideo() {
     }
   }, [activeSource])
 
-  const toggle = () => {
-    if (playing) {
-      wantsPlayback.current = false
-      videoRef.current.pause()
-    } else {
-      wantsPlayback.current = true
-      setRequested(true)
-      if (activeSource) videoRef.current?.play()?.catch(() => setPlaying(false))
-    }
-  }
 
   return (
     <>
@@ -97,17 +82,10 @@ export default function HeroVideo() {
         loop
         preload="none"
         aria-hidden="true"
-        onPlaying={() => { setPlaying(true); setHasPlayed(true) }}
-        onPause={() => setPlaying(false)}
-        onError={() => { setFailed(true); setPlaying(false) }}
+        onPlaying={() => setHasPlayed(true)}
+        onError={() => setFailed(true)}
       />
-      {!failed && (
-        <button className={styles.control} type="button" onClick={toggle}
-          aria-label={playing ? "Pause background video" : "Play background video"}>
-          <span aria-hidden="true">{playing ? "Ⅱ" : "▶"}</span>
-          {playing ? "Pause" : "Play video"}
-        </button>
-      )}
+
     </>
   )
 }

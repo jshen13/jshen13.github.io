@@ -13,25 +13,6 @@
 .poster img { display: block; }
 .video { opacity: 0; transition: opacity 400ms ease; }
 .visible { opacity: 1; }
-.control {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  min-height: 44px;
-  padding: 8px 14px;
-  border: 1px solid rgba(255, 255, 255, 0.65);
-  border-radius: 24px;
-  background: rgba(0, 0, 0, 0.65);
-  color: white;
-  font: inherit;
-  font-size: 14px;
-  cursor: pointer;
-}
-.control:focus-visible { outline: 3px solid white; outline-offset: 3px; }
 @media (prefers-reduced-motion: reduce) {
   .video { transition: none; }
 }
