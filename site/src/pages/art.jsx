@@ -32,7 +32,7 @@ export default function Art() {
         <React.Fragment>
         <Header siteTitle="Art Gallery"/>
             <SEO title="Art Gallery"></SEO>
-            <div className={artStyles.classComponent}>
+            <div>
             <div className={artStyles.gallery}>
         <div className={artStyles.artRow}>
             <div className={artStyles.art3}>

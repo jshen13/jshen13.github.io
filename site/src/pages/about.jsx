@@ -2,8 +2,8 @@ import React from "react"
 import { Link } from "gatsby"
 import { graphql } from 'gatsby'
 
-import Position from "../components/position"
 import Layout from "../components/layout"
+import Position from "../components/position"
 import SEO from "../components/seo"
 import School from "../components/school"
 import Intro from "../components/intro"
@@ -17,7 +17,7 @@ import ngLogo from "../images/logos/ng.jpg"
 import harmonyLogo from "../images/logos/harmony.jpg"
 import boeingLogo from "../images/logos/boeing.png"
 import calLogo from "../images/logos/ucb.png"
-import southLogo from "../images/logos/southLogo.gif"
+import southLogo from "../images/logos/southlogo.gif"
 import Activity from "../components/activity"
 
 import SFRoad from "../images/art/sf_road.jpg"

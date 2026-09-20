@@ -1,13 +1,12 @@
 import React from "react"
 import SEO from "../components/seo"
-import { graphql } from "gatsby"
 
 import ClassNotes from "../components/classNotes"
 import * as notesStyles from "./notes.module.css"
 
 import Layout from "../components/layout"
 
-export default function Notes({ data }) {
+export default function Notes() {
   function semesterHeading(semester) {
     return (
       <React.Fragment>
@@ -642,32 +641,3 @@ export default function Notes({ data }) {
     </div>
   )
 }
-
-export const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-
-    file(relativePath: { eq: "files/cs61a_fs.pdf" }) {
-      childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
-        fixed(width: 125, height: 125) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-
-    allFile(filter: { extension: { eq: "pdf" } }) {
-      edges {
-        node {
-          id
-          base
-        }
-      }
-    }
-  }
-`

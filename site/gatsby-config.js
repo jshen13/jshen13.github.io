@@ -24,7 +24,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-transformer-pdf`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -55,12 +54,11 @@ module.exports = {
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [
-          "G-TJKYT54R24	", // Google Analytics / GA
+          "G-TJKYT54R24", // Google Analytics / GA
         ],
         // This object gets passed directly to the gtag config command
         // This config will be shared across all trackingIds
         gtagConfig: {
-          optimize_id: "OPT_CONTAINER_ID",
           anonymize_ip: true,
           cookie_expires: 0,
         },
@@ -73,6 +71,6 @@ module.exports = {
         },
       },
     },
-    `gatsby-plugin-preload-fonts`
+    `gatsby-plugin-image`
   ],
 }

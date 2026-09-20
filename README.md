@@ -6,6 +6,30 @@
 
 Personal site and portfolio created with GatsbyJS using React. New Gatsby site is in `site` and `old-site` has old static site with HTML, CSS files. 
 
+## Dependency maintenance
+
+The Gatsby source is in `site/` on `develop`; `master` contains the published
+GitHub Pages output. Use Node 24 (`cd site && nvm install && nvm use`).
+
+```sh
+cd site
+npm ci
+npm test          # full production build, including all page queries and SSR
+npm audit         # review direct and transitive security advisories
+npm outdated
+```
+
+Pull requests and pushes to `develop` run the production build in GitHub Actions.
+Dependabot checks npm weekly, groups Gatsby and React updates, and checks Actions
+monthly. Review major-version changes and the build result before merging.
+`npm run deploy` builds and publishes to `master`; a successful local build alone
+does not update the live site.
+
+React remains on 18.3.1 for compatibility with the site's existing React Helmet
+and default-props usage. A React 19 upgrade requires a separate compatibility pass.
+Unused PDF parsing and font-preload tooling have been removed; the downloadable
+PDFs in `site/static/notes` continue to be copied directly into the published site.
+
 ## 🚀 Quick start
 
  **Deploy Site**

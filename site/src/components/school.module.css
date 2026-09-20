@@ -1,4 +1,4 @@
-dd {
+.courses dd {
     display: list-item;
     list-style-type: "💻";
     line-height: 1.2em;

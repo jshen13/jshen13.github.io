@@ -41,13 +41,12 @@ export default function Header({ data, siteTitle }) {
   //   </div>
   // </header>
 
-  console.log(headerStyles);
   
   return (
 <header className={headerStyles.siteHeader}>
       <meta property="og:image" content="https://jshen13.github.io/logo.png" />
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5986849736581274"
-     crossorigin="anonymous"></script>
+     crossOrigin="anonymous"></script>
 <nav className={ headerStyles.navBar} id="myTopnav" >
 <ul>
 <li  ><Link className={isActiveTab("About")} to="/about/">About</Link>
