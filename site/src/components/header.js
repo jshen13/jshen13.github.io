@@ -1,92 +1,70 @@
 import { Link } from "gatsby"
-import * as headerStyles from "./header.module.css"
-import React from "react"
+import React, { useEffect, useRef, useState } from "react"
 import logo from "../images/logos/logo2.png"
+import * as styles from "./header.module.css"
 
-export default function Header({ data, siteTitle }) {
-  function isActiveTab(name) {
-    if (name == siteTitle) {
-      return (
-        headerStyles.activeTab
-      )
-    } else {
-      return ""
+const tabs = [
+  { name: "Home", to: "/" },
+  { name: "Notes", to: "/notes/" },
+  { name: "Hobbies", to: "/hobbies/" },
+  { name: "About", to: "/about/" },
+]
+
+export default function Header({ siteTitle }) {
+  const [open, setOpen] = useState(false)
+  const navRef = useRef(null)
+  const toggleRef = useRef(null)
+
+  useEffect(() => {
+    if (!open) return
+    const onKey = event => {
+      if (event.key === "Escape") {
+        setOpen(false)
+        toggleRef.current?.focus()
+      }
     }
-}
-  // const Header = ({ siteTitle }) => (
-  // <header
-  //   style={{
-  //     background: `rebeccapurple`,
-  //     marginBottom: `1.45rem`,
-  //   }}
-  // >
-  //   <div
-  //     style={{
-  //       margin: `0 auto`,
-  //       maxWidth: 960,
-  //       padding: `1.45rem 1.0875rem`,
-  //     }}
-  //   >
-  //     <h1 style={{ margin: 0 }}>
-  //       <Link
-  //         to="/"
-  //         style={{
-  //           color: `white`,
-  //           textDecoration: `none`,
-  //         }}
-  //       >
-  //         {siteTitle}
-  //       </Link>
-  //     </h1>
-  //   </div>
-  // </header>
+    const onOutside = event => {
+      if (!navRef.current?.contains(event.target)) setOpen(false)
+    }
+    const desktop = window.matchMedia("(min-width: 901px)")
+    const onResize = () => { if (desktop.matches) setOpen(false) }
+    document.addEventListener("keydown", onKey)
+    document.addEventListener("pointerdown", onOutside)
+    desktop.addEventListener("change", onResize)
+    return () => {
+      document.removeEventListener("keydown", onKey)
+      document.removeEventListener("pointerdown", onOutside)
+      desktop.removeEventListener("change", onResize)
+    }
+  }, [open])
 
-  
   return (
-<header className={headerStyles.siteHeader}>
+    <header className={styles.siteHeader}>
       <meta property="og:image" content="https://jshen13.github.io/logo.png" />
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5986849736581274"
-     crossOrigin="anonymous"></script>
-<nav className={ headerStyles.navBar} id="myTopnav" >
-<ul>
-<li  ><Link className={isActiveTab("About")} to="/about/">About</Link>
-  {/* <a href="art.html">Art Portfolio</a> */}
-</li>
-<li><Link className={isActiveTab("Hobbies")} to="/hobbies/">Hobbies</Link>
-  {/* <a href="art.html">Art Portfolio</a> */}
-</li>
-<li><Link className={isActiveTab("Notes")} to="/notes/">Notes</Link>
-  {/* <a href="notes.html">Notes</a> */}
-</li>
-<li><Link className={isActiveTab("Home")} to="/">Home</Link>
-  {/* <a className="active" href="index.html">Home</a> */}
-        </li>
-        
-<h1 style={{ margin: 0, padding: 0 }}>
-          <Link to="/" style={{ color: `white`, textDecoration: `none` }}>
-            <img src={logo} width="25px" height="25px" alt="logo"/> {siteTitle} </Link>
-      </h1>
-  
-
-        
-</ul>
-
-</nav>
-
-
-</header>
-
-    )
-  
-  
-  
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5986849736581274" crossOrigin="anonymous" />
+      <nav className={styles.navBar} aria-label="Main navigation" ref={navRef}>
+        <Link to="/" className={styles.brand} onClick={() => setOpen(false)}>
+          <img src={logo} width="25" height="25" alt="" />
+          <span>{siteTitle}</span>
+        </Link>
+        <button ref={toggleRef} type="button" className={styles.menuToggle}
+          aria-expanded={open} aria-controls="site-navigation"
+          aria-label={open ? "Close navigation menu" : "Open navigation menu"}
+          onClick={() => setOpen(value => !value)}>
+          <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+            {open ? <path d="M6 6l12 12M6 18L18 6" /> : <path d="M3 6h18M3 12h18M3 18h18" />}
+          </svg>
+        </button>
+        <ul id="site-navigation" className={`${styles.navLinks} ${open ? styles.open : ""}`}>
+          {tabs.map(tab => (
+            <li key={tab.to}>
+              <Link to={tab.to} onClick={() => setOpen(false)}
+                className={siteTitle === tab.name ? styles.activeTab : undefined}
+                aria-current={siteTitle === tab.name ? "page" : undefined}>{tab.name}</Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </header>
+  )
 }
-
-// Header.propTypes = {
-//   siteTitle: PropTypes.string,
-// }
-
-// Header.defaultProps = {
-//   siteTitle: ``,
-// }
-

@@ -7,8 +7,7 @@ import Header from "../components/header"
 import Intro from "../components/intro"
 
 import * as homeStyles from "./index.module.css"
-import DroneVideo from "../videos/redondo_drone1080.mp4"
-import DroneVideoAlt from "../videos/video_alt.png"
+import HeroVideo from "../components/hero-video"
 import { FiChevronRight } from "react-icons/fi"
 import PersonalPic from "../images/personal2.jpg"
 import { FaLinkedin, FaGithub } from "react-icons/fa"
@@ -25,10 +24,7 @@ const IndexPage = ({ data }) => (
     <SEO title="Home" />
 
     <div className={homeStyles.mainVideo}>
-      <video autoPlay loop muted>
-        <source src={DroneVideo} type="video/mp4" />
-        <img id="alternative" src={DroneVideoAlt} />
-        </video>
+      <HeroVideo />
       <div className={homeStyles.videoCenter}>
         <div className={homeStyles.title}>
           Hi! I'm Jeffrey
@@ -38,16 +34,16 @@ const IndexPage = ({ data }) => (
         
       </div>
       <div className={homeStyles.aboutButton}>
-        <Link to="/about"><button className={homeStyles.btn}>
+        <Link to="/about/" className={homeStyles.btn}>
           <div className={homeStyles.borderAnimation}>
-            <svg width="140px" height="50px" viewBox="0 0 140 50" class="border">
-            <polyline points="139,1 139,49 1,49 1,1 139,1" class="bg-line" />
-            <polyline points="139,1 139,49 1,49 1,1 139,1" class="hl-line" />
+            <svg width="140px" height="50px" viewBox="0 0 140 50" className="border">
+            <polyline points="139,1 139,49 1,49 1,1 139,1" className="bg-line" />
+            <polyline points="139,1 139,49 1,49 1,1 139,1" className="hl-line" />
               </svg>
           </div>
           
             <span>About me <FiChevronRight style={{ transform: "translate(+0%, +15%)" }} /> </span>
-          </button></Link>  
+          </Link>
         </div>
     </div>
     

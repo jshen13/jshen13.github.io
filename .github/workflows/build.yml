@@ -2,7 +2,7 @@ name: Build site
 on:
   pull_request:
   push:
-    branches: [develop, codex/dependency-maintenance]
+    branches: [develop, "codex/**"]
 permissions:
   contents: read
 jobs:

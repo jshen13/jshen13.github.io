@@ -6,9 +6,12 @@
 
 
 .mainVideo {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
     text-align: center;
-    width: auto;
-    height: auto;
+    background: #25333d;
 }
 
 
@@ -54,15 +57,7 @@
     }
 }
 
-.mainVideo video {
-    position: relative;
-    width: 100vw;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
+
 
 .videoCenter {
     position: absolute;
@@ -98,7 +93,7 @@
     }
   }
 
-.aboutButton button {
+.aboutButton .btn {
     background-color: #f7f7f7; /* Green */
     border-radius: 2px;
     color: black;
@@ -107,7 +102,9 @@
     height: 50px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     font-size: 20px;
     transition-duration: 0.4s;
     cursor: pointer;
@@ -130,7 +127,7 @@
   }
 
 
-.aboutButton button:hover {
+.aboutButton .btn:hover {
     /* background-color: #292929; */
     background-color: #424242;
     color: white;
@@ -144,18 +141,32 @@
 }
 
 
-@media screen and (max-width:900px){
-    .mainVideo video {
-        position: relative;
-        width: auto;
-        height: 100vh;
-        display: flex;
-        object-fit: contain;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
+@media (max-width: 900px) {
+    .mainVideo {
+        aspect-ratio: auto;
+        height: calc(100vh - 64px);
+        height: calc(100svh - 64px);
+        min-height: 360px;
     }
-
+    .videoCenter { top: 42%; width: calc(100% - 40px); }
+    .title {
+        color: white;
+        font-size: clamp(36px, 9vw, 52px);
+        line-height: 1.15;
+        background: none;
+        backdrop-filter: none;
+        text-shadow: 0 2px 14px rgba(0, 0, 0, 0.7);
+        opacity: 1;
+        animation: none;
+    }
+    .aboutButton { top: 63%; opacity: 1; animation: none; }
+    .gallery3 { box-sizing: border-box; max-width: 100%; }
+    .gallery3 img { max-width: 100%; height: auto; object-fit: contain; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .title { animation: none; opacity: 1; color: white; background: none; }
+    .aboutButton { animation: none; opacity: 1; }
+    .borderAnimation svg, .aboutButton .btn { transition: none; }
 }
 
 .rest {
